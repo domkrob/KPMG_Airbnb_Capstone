@@ -1,6 +1,9 @@
 # Raw datasets
 data/raw/
 
+# Processed datasets
+data/processed/
+
 # Jupyter
 .ipynb_checkpoints/
 
