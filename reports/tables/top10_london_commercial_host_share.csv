@@ -1,0 +1,11 @@
+city,geo_key,str_density,commercial_host_share
+london,Bayswater,31,0.3871
+london,Notting Hill,119,0.3697
+london,Earl's Court,168,0.3571
+london,Brondesbury,55,0.3091
+london,Mayfair,33,0.303
+london,Paddington,152,0.2895
+london,South Kensington,87,0.2874
+london,South Hampstead,36,0.2778
+london,London Borough of Brent,59,0.2712
+london,King's Cross,85,0.2706

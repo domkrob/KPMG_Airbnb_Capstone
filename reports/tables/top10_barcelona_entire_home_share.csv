@@ -1,0 +1,11 @@
+city,geo_key,str_density,entire_home_share
+barcelona,les Corts,32,0.875
+barcelona,el Camp d'en Grassot i Gràcia Nova,37,0.7838
+barcelona,la Sagrada Família,144,0.7361
+barcelona,la Barceloneta,68,0.7353
+barcelona,la Vila de Gràcia,104,0.7308
+barcelona,el Poblenou,59,0.7288
+barcelona,Sant Gervasi - Galvany,44,0.7273
+barcelona,el Poble-sec,118,0.7034
+barcelona,la Dreta de l'Eixample,295,0.6814
+barcelona,Sant Antoni,79,0.6456

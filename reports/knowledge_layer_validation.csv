@@ -1,0 +1,20 @@
+check,status,detail
+both cities present,PASS,"cities=['barcelona', 'london']"
+no nulls in critical count columns,PASS,nulls in: []
+schema parity (BCN vs LDN),PASS,diff: set()
+density reconciles (barcelona),PASS,"features=2354, kpis_sum=2354"
+density reconciles (london),PASS,"features=9599, kpis_sum=9599"
+entire_home reconciles (barcelona),PASS,"features=1414, kpis_sum=1414"
+entire_home reconciles (london),PASS,"features=6504, kpis_sum=6504"
+breach_90 reconciles (barcelona),PASS,"features=611, kpis_sum=611"
+breach_90 reconciles (london),PASS,"features=1482, kpis_sum=1482"
+"commercial_host_share in [0,1]",PASS,
+"entire_home_share in [0,1]",PASS,
+"multi_listing_host_share in [0,1]",PASS,
+"active_share in [0,1]",PASS,
+"breach_rate_90 in [0,1]",PASS,
+"breach_rate_60 in [0,1]",PASS,
+"breach_rate_30 in [0,1]",PASS,
+"reside_unregistered_share in [0,1]",PASS,
+"professional_management_share in [0,1]",PASS,
+"no duplicate (city, geo_key)",PASS,duplicates=0

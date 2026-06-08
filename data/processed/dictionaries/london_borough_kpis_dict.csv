@@ -1,0 +1,10 @@
+column,dtype,source,definition,unit,null_pct,example,notes
+borough,str,Phase C,London borough name (normalised to match geojson).,string,0.0,Barking and Dagenham,"Stripped of borough prefixes AND Westminster sub-areas (Mayfair, Belgravia, …) are rolled up into Westminster."
+str_density,int64,Phase C,Listings in borough.,count,0.0,57,
+entire_home_count,int64,Phase C,Entire-home listings in borough.,count,0.0,32,
+breach_count_90,int64,Phase C,Entire homes > 90 nights in borough.,count,0.0,4,
+avg_occupancy,float64,Phase C,Mean l90d_occupancy in borough.,ratio 0–1,0.0,0.078,
+median_nightly_price,float64,Phase C,Median TTM nightly rate in borough.,GBP,0.0,133.3,
+total_revenue,float64,Phase C,Sum of TTM revenue in borough.,GBP,0.0,280140.0,
+entire_home_share,float64,Phase C,entire_home_count / str_density.,ratio 0–1,0.0,0.561,
+breach_rate_90,float64,Phase C,breach_count_90 / entire_home_count.,ratio 0–1,0.0,0.125,
