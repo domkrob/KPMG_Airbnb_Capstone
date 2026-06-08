@@ -1,0 +1,18 @@
+column,dtype,source,definition,unit,null_pct,example,notes
+date,int64,raw AirDNA (months JSON),Month timestamp in milliseconds since epoch.,epoch ms,0.0,1614556800000,
+month_date,datetime64[us],cleaning,Parsed month timestamp.,datetime,0.0,2021-03-01 00:00:00,
+listing_id,int64,cleaning,"Listing identifier, joins back to *_listings_clean.csv.",—,0.0,14948804,
+available_days,int64,raw AirDNA,Days the listing was available for booking that month.,days,0.0,31,
+unavailable_days,int64,raw AirDNA,Days the listing was booked or blocked.,days,0.0,0,
+occupancy,float64,raw AirDNA,Occupancy ratio for the month.,ratio 0–1,0.0,0.0,
+avg_daily_rate,float64,cleaning (renamed),Average daily rate for the month.,EUR or GBP/night,0.0,24.4,Renamed from rate_avg in raw.
+native_rate_avg,int64,raw AirDNA,Average daily rate in host's reporting currency.,native ccy/night,0.0,20,
+revenue,int64,raw AirDNA,Revenue earned that month.,EUR or GBP,0.0,0,
+native_revenue,int64,raw AirDNA,Revenue in host's reporting currency.,native ccy,0.0,0,
+active,bool,raw AirDNA,Whether the listing was active that month.,True/False,0.0,False,Drives Phase A's is_active_recent flag.
+booking_lead_time_avg,float64,raw AirDNA,Average days from booking to check-in.,days,74.6,1.0,Frequently null.
+length_of_stay_avg,float64,raw AirDNA,Average length of stay.,nights,74.6,3.0,Frequently null.
+booked_rate_avg,float64,raw AirDNA,Average rate of booked nights only.,EUR or GBP/night,42.8,25.0,Null when no bookings.
+native_booked_rate_avg,float64,raw AirDNA,Booked rate in host's currency.,native ccy/night,42.8,21.0,
+revpar,float64,cleaning (renamed),Revenue per available room.,EUR or GBP,0.0,0.0,Renamed from rev_par in raw.
+native_rev_par,int64,raw AirDNA,RevPAR in host's currency.,native ccy,0.0,0,

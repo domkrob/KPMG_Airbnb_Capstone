@@ -1,0 +1,58 @@
+name: kpmg-airbnb-capstone
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.10,<3.12
+  - pip
+
+  # Core data stack
+  - pandas
+  - numpy
+  - pyarrow              # parquet read/write (raw files are parquet)
+  - openpyxl             # xlsx (rental stats, INDICE ESTATAL)
+  - python-dotenv        # .env / secrets loading
+
+  # ML / analytics
+  - scikit-learn
+  - scipy
+  - statsmodels
+  - joblib
+  - shap
+  - lime
+
+  # Visualisation
+  - matplotlib
+  - seaborn
+  - plotly
+
+  # Geospatial (neighbourhood choropleths, geojson)
+  - geopandas
+  - folium
+  - shapely
+  - fiona
+  - pyproj
+
+  # Notebook / kernel tooling
+  - jupyter
+  - jupyterlab
+  - ipykernel
+  - nbconvert
+  - nbformat
+
+  # Testing / config
+  - pytest
+  - pytest-cov
+  - pyyaml
+  - tqdm
+  - requests
+  - tabulate           # df.to_markdown() in EDA outputs
+
+  # Experiment tracking (parity with MLOPS reference)
+  - wandb
+
+  - pip:
+      # Chatbot stack (Phase 5)
+      - streamlit
+      - anthropic
+      - tiktoken

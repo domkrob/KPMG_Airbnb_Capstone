@@ -1,8 +1,25 @@
-# Raw datasets
+# Raw datasets — too large for git; team shares via OneDrive
 data/raw/
 
-# Processed datasets
-data/processed/
+# Processed datasets — large derived files are gitignored;
+# small reference artifacts are explicitly tracked via the !exceptions below.
+data/processed/*
+!data/processed/neighbourhood_kpis.csv
+!data/processed/london_borough_kpis.csv
+!data/processed/subdivision_name_map.csv
+!data/processed/data_dictionary.md
+!data/processed/data_dictionary_neighbourhood_kpis.csv
+!data/processed/dictionaries/
+!data/processed/barcelona/
+!data/processed/london/
+
+# Inside the city folders, ignore the heavy derived CSVs.
+# Only the cleaned-base CSVs are tracked (Pablo committed these from Member 1).
+data/processed/barcelona/*_features.csv
+data/processed/london/*_features.csv
+data/processed/barcelona/*_monthly_metrics_clean.csv
+data/processed/london/*_monthly_metrics_clean.csv
+data/processed/london/london_listings_clean.csv
 
 # Jupyter
 .ipynb_checkpoints/

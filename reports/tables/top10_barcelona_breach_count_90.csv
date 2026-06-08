@@ -1,0 +1,11 @@
+city,geo_key,str_density,breach_count_90
+barcelona,la Dreta de l'Eixample,295,95
+barcelona,la Sagrada Família,144,53
+barcelona,el Poble-sec,118,46
+barcelona,l'Antiga Esquerra de l'Eixample,148,43
+barcelona,la Vila de Gràcia,104,34
+barcelona,"Sant Pere, Santa Caterina i la Ribera",163,31
+barcelona,la Nova Esquerra de l'Eixample,114,31
+barcelona,el Raval,203,28
+barcelona,Sant Antoni,79,26
+barcelona,el Poblenou,59,21
