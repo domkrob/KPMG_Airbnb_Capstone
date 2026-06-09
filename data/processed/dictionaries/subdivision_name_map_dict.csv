@@ -1,0 +1,5 @@
+column,dtype,source,definition,unit,null_pct,example,notes
+city,str,Phase C,Which city the row applies to.,barcelona|london,0.0,barcelona,
+airdna_name,str,Phase C,Name as it appears in our AirDNA-derived data.,string,0.0,Gothic Quarter,
+geojson_name,str,Phase C,Name as it appears in the Inside Airbnb geojson.,string,0.0,el Barri Gòtic,Apply this rename before joining to the geojson.
+notes,str,Phase C,Why the rename is needed.,string,0.0,English vs Catalan spelling,

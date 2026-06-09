@@ -1,0 +1,1382 @@
+{
+  "Q1": {
+    "question": "Q1 — Which neighbourhoods have the highest concentration of STRs?",
+    "method": "Top 10 subdivisions per city by str_density.",
+    "answers": {
+      "barcelona": [
+        {
+          "rank": 1,
+          "geo_key": "la Dreta de l'Eixample",
+          "str_density": 295
+        },
+        {
+          "rank": 2,
+          "geo_key": "el Raval",
+          "str_density": 203
+        },
+        {
+          "rank": 3,
+          "geo_key": "Sant Pere, Santa Caterina i la Ribera",
+          "str_density": 163
+        },
+        {
+          "rank": 4,
+          "geo_key": "Gothic Quarter",
+          "str_density": 160
+        },
+        {
+          "rank": 5,
+          "geo_key": "l'Antiga Esquerra de l'Eixample",
+          "str_density": 148
+        },
+        {
+          "rank": 6,
+          "geo_key": "la Sagrada Família",
+          "str_density": 144
+        },
+        {
+          "rank": 7,
+          "geo_key": "el Poble-sec",
+          "str_density": 118
+        },
+        {
+          "rank": 8,
+          "geo_key": "la Nova Esquerra de l'Eixample",
+          "str_density": 114
+        },
+        {
+          "rank": 9,
+          "geo_key": "la Vila de Gràcia",
+          "str_density": 104
+        },
+        {
+          "rank": 10,
+          "geo_key": "Sant Antoni",
+          "str_density": 79
+        }
+      ],
+      "london": [
+        {
+          "rank": 1,
+          "geo_key": "Whitechapel",
+          "str_density": 242
+        },
+        {
+          "rank": 2,
+          "geo_key": "Westbourne Green",
+          "str_density": 210
+        },
+        {
+          "rank": 3,
+          "geo_key": "Marylebone",
+          "str_density": 178
+        },
+        {
+          "rank": 4,
+          "geo_key": "Earl's Court",
+          "str_density": 168
+        },
+        {
+          "rank": 5,
+          "geo_key": "Paddington",
+          "str_density": 152
+        },
+        {
+          "rank": 6,
+          "geo_key": "Fulham",
+          "str_density": 139
+        },
+        {
+          "rank": 7,
+          "geo_key": "West Kensington",
+          "str_density": 127
+        },
+        {
+          "rank": 8,
+          "geo_key": "Chelsea",
+          "str_density": 123
+        },
+        {
+          "rank": 9,
+          "geo_key": "Notting Hill",
+          "str_density": 119
+        },
+        {
+          "rank": 10,
+          "geo_key": "London Borough of Ealing",
+          "str_density": 117
+        }
+      ]
+    }
+  },
+  "Q2": {
+    "question": "Q2 — Where is Airbnb most likely removing homes from the long-term residential market?",
+    "method": "Top 10 subdivisions per city by entire_home_share, restricted to neighbourhoods with str_density >= 30.",
+    "answers": {
+      "barcelona": [
+        {
+          "rank": 1,
+          "geo_key": "les Corts",
+          "str_density": 32,
+          "entire_home_count": 28,
+          "entire_home_share": 0.875
+        },
+        {
+          "rank": 2,
+          "geo_key": "el Camp d'en Grassot i Gràcia Nova",
+          "str_density": 37,
+          "entire_home_count": 29,
+          "entire_home_share": 0.784
+        },
+        {
+          "rank": 3,
+          "geo_key": "la Sagrada Família",
+          "str_density": 144,
+          "entire_home_count": 106,
+          "entire_home_share": 0.736
+        },
+        {
+          "rank": 4,
+          "geo_key": "la Barceloneta",
+          "str_density": 68,
+          "entire_home_count": 50,
+          "entire_home_share": 0.735
+        },
+        {
+          "rank": 5,
+          "geo_key": "la Vila de Gràcia",
+          "str_density": 104,
+          "entire_home_count": 76,
+          "entire_home_share": 0.731
+        },
+        {
+          "rank": 6,
+          "geo_key": "el Poblenou",
+          "str_density": 59,
+          "entire_home_count": 43,
+          "entire_home_share": 0.729
+        },
+        {
+          "rank": 7,
+          "geo_key": "Sant Gervasi - Galvany",
+          "str_density": 44,
+          "entire_home_count": 32,
+          "entire_home_share": 0.727
+        },
+        {
+          "rank": 8,
+          "geo_key": "el Poble-sec",
+          "str_density": 118,
+          "entire_home_count": 83,
+          "entire_home_share": 0.703
+        },
+        {
+          "rank": 9,
+          "geo_key": "la Dreta de l'Eixample",
+          "str_density": 295,
+          "entire_home_count": 201,
+          "entire_home_share": 0.681
+        },
+        {
+          "rank": 10,
+          "geo_key": "Sant Antoni",
+          "str_density": 79,
+          "entire_home_count": 51,
+          "entire_home_share": 0.646
+        }
+      ],
+      "london": [
+        {
+          "rank": 1,
+          "geo_key": "Brompton",
+          "str_density": 100,
+          "entire_home_count": 95,
+          "entire_home_share": 0.95
+        },
+        {
+          "rank": 2,
+          "geo_key": "London Borough of Wandsworth",
+          "str_density": 36,
+          "entire_home_count": 34,
+          "entire_home_share": 0.944
+        },
+        {
+          "rank": 3,
+          "geo_key": "Mayfair",
+          "str_density": 33,
+          "entire_home_count": 31,
+          "entire_home_share": 0.939
+        },
+        {
+          "rank": 4,
+          "geo_key": "Chelsea",
+          "str_density": 123,
+          "entire_home_count": 112,
+          "entire_home_share": 0.911
+        },
+        {
+          "rank": 5,
+          "geo_key": "Notting Hill",
+          "str_density": 119,
+          "entire_home_count": 106,
+          "entire_home_share": 0.891
+        },
+        {
+          "rank": 6,
+          "geo_key": "South Kensington",
+          "str_density": 87,
+          "entire_home_count": 76,
+          "entire_home_share": 0.874
+        },
+        {
+          "rank": 7,
+          "geo_key": "Holborn",
+          "str_density": 74,
+          "entire_home_count": 64,
+          "entire_home_share": 0.865
+        },
+        {
+          "rank": 8,
+          "geo_key": "Earl's Court",
+          "str_density": 168,
+          "entire_home_count": 145,
+          "entire_home_share": 0.863
+        },
+        {
+          "rank": 9,
+          "geo_key": "Marylebone",
+          "str_density": 178,
+          "entire_home_count": 153,
+          "entire_home_share": 0.86
+        },
+        {
+          "rank": 10,
+          "geo_key": "Shoreditch",
+          "str_density": 63,
+          "entire_home_count": 54,
+          "entire_home_share": 0.857
+        }
+      ]
+    }
+  },
+  "Q3": {
+    "question": "Q3 — Which neighbourhoods are dominated by commercial/professional hosts?",
+    "method": "Top 10 subdivisions per city by commercial_host_share (commercial+super_commercial tiers, ≥5 listings/host), restricted to str_density >= 30.",
+    "answers": {
+      "barcelona": [
+        {
+          "rank": 1,
+          "geo_key": "la Nova Esquerra de l'Eixample",
+          "str_density": 114,
+          "commercial_host_share": 0.404,
+          "multi_listing_host_share": 0.57
+        },
+        {
+          "rank": 2,
+          "geo_key": "el Poble-sec",
+          "str_density": 118,
+          "commercial_host_share": 0.364,
+          "multi_listing_host_share": 0.559
+        },
+        {
+          "rank": 3,
+          "geo_key": "l'Antiga Esquerra de l'Eixample",
+          "str_density": 148,
+          "commercial_host_share": 0.345,
+          "multi_listing_host_share": 0.635
+        },
+        {
+          "rank": 4,
+          "geo_key": "Sant Antoni",
+          "str_density": 79,
+          "commercial_host_share": 0.329,
+          "multi_listing_host_share": 0.595
+        },
+        {
+          "rank": 5,
+          "geo_key": "Sant Gervasi - Galvany",
+          "str_density": 44,
+          "commercial_host_share": 0.318,
+          "multi_listing_host_share": 0.659
+        },
+        {
+          "rank": 6,
+          "geo_key": "la Sagrada Família",
+          "str_density": 144,
+          "commercial_host_share": 0.285,
+          "multi_listing_host_share": 0.479
+        },
+        {
+          "rank": 7,
+          "geo_key": "Hostafrancs",
+          "str_density": 32,
+          "commercial_host_share": 0.281,
+          "multi_listing_host_share": 0.469
+        },
+        {
+          "rank": 8,
+          "geo_key": "el Fort Pienc",
+          "str_density": 67,
+          "commercial_host_share": 0.269,
+          "multi_listing_host_share": 0.522
+        },
+        {
+          "rank": 9,
+          "geo_key": "la Dreta de l'Eixample",
+          "str_density": 295,
+          "commercial_host_share": 0.264,
+          "multi_listing_host_share": 0.651
+        },
+        {
+          "rank": 10,
+          "geo_key": "la Vila de Gràcia",
+          "str_density": 104,
+          "commercial_host_share": 0.25,
+          "multi_listing_host_share": 0.519
+        }
+      ],
+      "london": [
+        {
+          "rank": 1,
+          "geo_key": "Bayswater",
+          "str_density": 31,
+          "commercial_host_share": 0.387,
+          "multi_listing_host_share": 0.645
+        },
+        {
+          "rank": 2,
+          "geo_key": "Notting Hill",
+          "str_density": 119,
+          "commercial_host_share": 0.37,
+          "multi_listing_host_share": 0.538
+        },
+        {
+          "rank": 3,
+          "geo_key": "Earl's Court",
+          "str_density": 168,
+          "commercial_host_share": 0.357,
+          "multi_listing_host_share": 0.607
+        },
+        {
+          "rank": 4,
+          "geo_key": "Brondesbury",
+          "str_density": 55,
+          "commercial_host_share": 0.309,
+          "multi_listing_host_share": 0.582
+        },
+        {
+          "rank": 5,
+          "geo_key": "Mayfair",
+          "str_density": 33,
+          "commercial_host_share": 0.303,
+          "multi_listing_host_share": 0.727
+        },
+        {
+          "rank": 6,
+          "geo_key": "Paddington",
+          "str_density": 152,
+          "commercial_host_share": 0.289,
+          "multi_listing_host_share": 0.52
+        },
+        {
+          "rank": 7,
+          "geo_key": "South Kensington",
+          "str_density": 87,
+          "commercial_host_share": 0.287,
+          "multi_listing_host_share": 0.609
+        },
+        {
+          "rank": 8,
+          "geo_key": "South Hampstead",
+          "str_density": 36,
+          "commercial_host_share": 0.278,
+          "multi_listing_host_share": 0.444
+        },
+        {
+          "rank": 9,
+          "geo_key": "London Borough of Brent",
+          "str_density": 59,
+          "commercial_host_share": 0.271,
+          "multi_listing_host_share": 0.407
+        },
+        {
+          "rank": 10,
+          "geo_key": "King's Cross",
+          "str_density": 85,
+          "commercial_host_share": 0.271,
+          "multi_listing_host_share": 0.6
+        }
+      ]
+    }
+  },
+  "Q4": {
+    "question": "Q4 — In which neighbourhoods does high STR density coincide with high prices?",
+    "method": "Subdivisions in top quartile of BOTH str_density AND median_nightly_price per city (str_density >= 30).",
+    "answers": {
+      "barcelona": [
+        {
+          "geo_key": "la Dreta de l'Eixample",
+          "str_density": 295,
+          "median_nightly_price": 265.6
+        }
+      ],
+      "london": [
+        {
+          "geo_key": "Westbourne Green",
+          "str_density": 210,
+          "median_nightly_price": 250.2
+        },
+        {
+          "geo_key": "Marylebone",
+          "str_density": 178,
+          "median_nightly_price": 273.4
+        },
+        {
+          "geo_key": "Earl's Court",
+          "str_density": 168,
+          "median_nightly_price": 245.2
+        },
+        {
+          "geo_key": "Paddington",
+          "str_density": 152,
+          "median_nightly_price": 301.5
+        },
+        {
+          "geo_key": "Fulham",
+          "str_density": 139,
+          "median_nightly_price": 235.7
+        },
+        {
+          "geo_key": "Chelsea",
+          "str_density": 123,
+          "median_nightly_price": 405.2
+        },
+        {
+          "geo_key": "Notting Hill",
+          "str_density": 119,
+          "median_nightly_price": 234.1
+        },
+        {
+          "geo_key": "Fitzrovia",
+          "str_density": 104,
+          "median_nightly_price": 224.8
+        },
+        {
+          "geo_key": "Brompton",
+          "str_density": 100,
+          "median_nightly_price": 306.6
+        },
+        {
+          "geo_key": "South Kensington",
+          "str_density": 87,
+          "median_nightly_price": 409.9
+        },
+        {
+          "geo_key": "Holborn",
+          "str_density": 74,
+          "median_nightly_price": 299.9
+        },
+        {
+          "geo_key": "Kensington",
+          "str_density": 74,
+          "median_nightly_price": 273.7
+        }
+      ]
+    },
+    "correlations": {
+      "barcelona": 0.298,
+      "london": 0.258
+    }
+  },
+  "Q5": {
+    "question": "Q5 — Which neighbourhoods are saturated, and which are emerging hotspots?",
+    "method": "Saturated = composite of high density + entire-home share + commercial-host share + occupancy. Emerging = top active-listing growth (recent 6 mo vs prior 6 mo). Member 3 will replace the saturated heuristic with the proper KMeans cluster label.",
+    "answers": {
+      "saturated": {
+        "barcelona": [
+          {
+            "rank": 1,
+            "geo_key": "la Dreta de l'Eixample",
+            "str_density": 295,
+            "entire_home_share": 0.681,
+            "commercial_host_share": 0.264,
+            "avg_occupancy": 0.23,
+            "saturation_score": 4.21
+          },
+          {
+            "rank": 2,
+            "geo_key": "el Poble-sec",
+            "str_density": 118,
+            "entire_home_share": 0.703,
+            "commercial_host_share": 0.364,
+            "avg_occupancy": 0.233,
+            "saturation_score": 3.06
+          },
+          {
+            "rank": 3,
+            "geo_key": "la Sagrada Família",
+            "str_density": 144,
+            "entire_home_share": 0.736,
+            "commercial_host_share": 0.285,
+            "avg_occupancy": 0.245,
+            "saturation_score": 2.98
+          },
+          {
+            "rank": 4,
+            "geo_key": "l'Antiga Esquerra de l'Eixample",
+            "str_density": 148,
+            "entire_home_share": 0.635,
+            "commercial_host_share": 0.345,
+            "avg_occupancy": 0.206,
+            "saturation_score": 2.26
+          },
+          {
+            "rank": 5,
+            "geo_key": "la Nova Esquerra de l'Eixample",
+            "str_density": 114,
+            "entire_home_share": 0.526,
+            "commercial_host_share": 0.404,
+            "avg_occupancy": 0.241,
+            "saturation_score": 2.2
+          },
+          {
+            "rank": 6,
+            "geo_key": "la Vila de Gràcia",
+            "str_density": 104,
+            "entire_home_share": 0.731,
+            "commercial_host_share": 0.25,
+            "avg_occupancy": 0.228,
+            "saturation_score": 1.67
+          },
+          {
+            "rank": 7,
+            "geo_key": "el Camp d'en Grassot i Gràcia Nova",
+            "str_density": 37,
+            "entire_home_share": 0.784,
+            "commercial_host_share": 0.135,
+            "avg_occupancy": 0.32,
+            "saturation_score": 1.4
+          },
+          {
+            "rank": 8,
+            "geo_key": "Sant Antoni",
+            "str_density": 79,
+            "entire_home_share": 0.646,
+            "commercial_host_share": 0.329,
+            "avg_occupancy": 0.217,
+            "saturation_score": 1.37
+          },
+          {
+            "rank": 9,
+            "geo_key": "Sant Gervasi - Galvany",
+            "str_density": 44,
+            "entire_home_share": 0.727,
+            "commercial_host_share": 0.318,
+            "avg_occupancy": 0.168,
+            "saturation_score": 0.54
+          },
+          {
+            "rank": 10,
+            "geo_key": "les Corts",
+            "str_density": 32,
+            "entire_home_share": 0.875,
+            "commercial_host_share": 0.25,
+            "avg_occupancy": 0.139,
+            "saturation_score": 0.25
+          }
+        ],
+        "london": [
+          {
+            "rank": 1,
+            "geo_key": "Notting Hill",
+            "str_density": 119,
+            "entire_home_share": 0.891,
+            "commercial_host_share": 0.37,
+            "avg_occupancy": 0.161,
+            "saturation_score": 6.36
+          },
+          {
+            "rank": 2,
+            "geo_key": "Earl's Court",
+            "str_density": 168,
+            "entire_home_share": 0.863,
+            "commercial_host_share": 0.357,
+            "avg_occupancy": 0.105,
+            "saturation_score": 6.18
+          },
+          {
+            "rank": 3,
+            "geo_key": "Westbourne Green",
+            "str_density": 210,
+            "entire_home_share": 0.848,
+            "commercial_host_share": 0.262,
+            "avg_occupancy": 0.106,
+            "saturation_score": 6.14
+          },
+          {
+            "rank": 4,
+            "geo_key": "Paddington",
+            "str_density": 152,
+            "entire_home_share": 0.842,
+            "commercial_host_share": 0.289,
+            "avg_occupancy": 0.167,
+            "saturation_score": 6.08
+          },
+          {
+            "rank": 5,
+            "geo_key": "Whitechapel",
+            "str_density": 242,
+            "entire_home_share": 0.612,
+            "commercial_host_share": 0.157,
+            "avg_occupancy": 0.17,
+            "saturation_score": 5.16
+          },
+          {
+            "rank": 6,
+            "geo_key": "Marylebone",
+            "str_density": 178,
+            "entire_home_share": 0.86,
+            "commercial_host_share": 0.191,
+            "avg_occupancy": 0.112,
+            "saturation_score": 4.74
+          },
+          {
+            "rank": 7,
+            "geo_key": "Chelsea",
+            "str_density": 123,
+            "entire_home_share": 0.911,
+            "commercial_host_share": 0.268,
+            "avg_occupancy": 0.106,
+            "saturation_score": 4.44
+          },
+          {
+            "rank": 8,
+            "geo_key": "South Kensington",
+            "str_density": 87,
+            "entire_home_share": 0.874,
+            "commercial_host_share": 0.287,
+            "avg_occupancy": 0.145,
+            "saturation_score": 4.19
+          },
+          {
+            "rank": 9,
+            "geo_key": "Shoreditch",
+            "str_density": 63,
+            "entire_home_share": 0.857,
+            "commercial_host_share": 0.222,
+            "avg_occupancy": 0.217,
+            "saturation_score": 4.14
+          },
+          {
+            "rank": 10,
+            "geo_key": "Waterloo",
+            "str_density": 30,
+            "entire_home_share": 0.767,
+            "commercial_host_share": 0.267,
+            "avg_occupancy": 0.259,
+            "saturation_score": 3.87
+          }
+        ]
+      },
+      "emerging": {
+        "barcelona": [
+          {
+            "rank": 1,
+            "geo_key": "Can Baró",
+            "prior_active": 5.0,
+            "recent_active": 6.0,
+            "active_growth_pct": 20.0
+          },
+          {
+            "rank": 2,
+            "geo_key": "la Font de la Guatlla",
+            "prior_active": 9.0,
+            "recent_active": 9.0,
+            "active_growth_pct": 0.0
+          },
+          {
+            "rank": 3,
+            "geo_key": "la Sagrera",
+            "prior_active": 5.0,
+            "recent_active": 5.0,
+            "active_growth_pct": 0.0
+          },
+          {
+            "rank": 4,
+            "geo_key": "les Corts",
+            "prior_active": 21.5,
+            "recent_active": 21.2,
+            "active_growth_pct": -1.6
+          },
+          {
+            "rank": 5,
+            "geo_key": "el Baix Guinardó",
+            "prior_active": 12.0,
+            "recent_active": 11.2,
+            "active_growth_pct": -6.9
+          }
+        ],
+        "london": [
+          {
+            "rank": 1,
+            "geo_key": "Greenford",
+            "prior_active": 5.0,
+            "recent_active": 5.7,
+            "active_growth_pct": 13.3
+          },
+          {
+            "rank": 2,
+            "geo_key": "Abbey Wood",
+            "prior_active": 5.8,
+            "recent_active": 6.5,
+            "active_growth_pct": 11.4
+          },
+          {
+            "rank": 3,
+            "geo_key": "Gants Hill",
+            "prior_active": 5.0,
+            "recent_active": 5.5,
+            "active_growth_pct": 10.0
+          },
+          {
+            "rank": 4,
+            "geo_key": "North Sheen",
+            "prior_active": 9.8,
+            "recent_active": 10.0,
+            "active_growth_pct": 1.7
+          },
+          {
+            "rank": 5,
+            "geo_key": "Earlsfield",
+            "prior_active": 13.5,
+            "recent_active": 13.7,
+            "active_growth_pct": 1.2
+          },
+          {
+            "rank": 6,
+            "geo_key": "Edmonton",
+            "prior_active": 5.0,
+            "recent_active": 5.0,
+            "active_growth_pct": 0.0
+          },
+          {
+            "rank": 7,
+            "geo_key": "East Sheen",
+            "prior_active": 6.0,
+            "recent_active": 6.0,
+            "active_growth_pct": 0.0
+          },
+          {
+            "rank": 8,
+            "geo_key": "Finchley",
+            "prior_active": 8.3,
+            "recent_active": 8.2,
+            "active_growth_pct": -2.0
+          },
+          {
+            "rank": 9,
+            "geo_key": "Highams Park",
+            "prior_active": 9.5,
+            "recent_active": 9.2,
+            "active_growth_pct": -3.5
+          },
+          {
+            "rank": 10,
+            "geo_key": "Selhurst",
+            "prior_active": 9.0,
+            "recent_active": 8.7,
+            "active_growth_pct": -3.7
+          }
+        ]
+      }
+    }
+  },
+  "Q6": {
+    "question": "Q6 — How does STR pressure compare between Barcelona and London?",
+    "method": "Side-by-side comparison of citywide totals and neighbourhood-level medians.",
+    "answers": {
+      "citywide_totals": {
+        "barcelona": {
+          "total_listings": 2594,
+          "unique_hosts": 1637,
+          "unique_subdivisions": 66,
+          "entire_homes": 1539,
+          "entire_home_share": 0.593,
+          "active_listings_last_12m": 1655,
+          "breach_90_total": 642,
+          "reside_unregistered_total": 421,
+          "ttm_revenue_total": 52159190.0,
+          "median_nightly_price": 156.0,
+          "median_occupancy_active": 0.044,
+          "mean_occupancy_active": 0.21
+        },
+        "london": {
+          "total_listings": 9643,
+          "unique_hosts": 7312,
+          "unique_subdivisions": 455,
+          "entire_homes": 6536,
+          "entire_home_share": 0.678,
+          "active_listings_last_12m": 5967,
+          "breach_90_total": 1485,
+          "reside_unregistered_total": 2572,
+          "ttm_revenue_total": 122631037.0,
+          "median_nightly_price": 174.7,
+          "median_occupancy_active": 0.0,
+          "mean_occupancy_active": 0.137
+        }
+      },
+      "neighbourhood_medians": {
+        "barcelona": {
+          "str_density": 10.0,
+          "entire_home_share": 0.53,
+          "commercial_host_share": 0.134,
+          "avg_occupancy": 0.132,
+          "median_nightly_price": 118.85,
+          "breach_rate_90": 0.447
+        },
+        "london": {
+          "str_density": 8.0,
+          "entire_home_share": 0.625,
+          "commercial_host_share": 0.0,
+          "avg_occupancy": 0.086,
+          "median_nightly_price": 142.75,
+          "breach_rate_90": 0.188
+        }
+      }
+    }
+  },
+  "Q7": {
+    "question": "Q7 — If entire-home listings were capped at X nights/year, how many listings and which neighbourhoods would be affected?",
+    "method": "Sum of breach_count_{cap} per city (city totals), plus top-impacted neighbourhoods per cap per city. RESIDE simulation: count of reside_unregistered listings per Barcelona neighbourhood (entire homes without registration on record).",
+    "answers": {
+      "city_totals": {
+        "barcelona": {
+          "cap_90_listings_impacted": 611,
+          "cap_60_listings_impacted": 689,
+          "cap_30_listings_impacted": 751,
+          "entire_homes_total": 1414,
+          "reside_unregistered_total": 421,
+          "note": "Sum over neighbourhoods; excludes listings with no subdivision/neighborhood. City-wide totals from listings_features may differ by a few listings."
+        },
+        "london": {
+          "cap_90_listings_impacted": 1482,
+          "cap_60_listings_impacted": 1863,
+          "cap_30_listings_impacted": 2260,
+          "entire_homes_total": 6504,
+          "reside_unregistered_total": 2563,
+          "note": "Sum over neighbourhoods; excludes listings with no subdivision/neighborhood. City-wide totals from listings_features may differ by a few listings."
+        }
+      },
+      "top_impacted_neighbourhoods": {
+        "barcelona": {
+          "cap_90": [
+            {
+              "rank": 1,
+              "geo_key": "la Dreta de l'Eixample",
+              "listings_impacted": 95,
+              "entire_home_count": 201,
+              "breach_rate": 0.473
+            },
+            {
+              "rank": 2,
+              "geo_key": "la Sagrada Família",
+              "listings_impacted": 53,
+              "entire_home_count": 106,
+              "breach_rate": 0.5
+            },
+            {
+              "rank": 3,
+              "geo_key": "el Poble-sec",
+              "listings_impacted": 46,
+              "entire_home_count": 83,
+              "breach_rate": 0.554
+            },
+            {
+              "rank": 4,
+              "geo_key": "l'Antiga Esquerra de l'Eixample",
+              "listings_impacted": 43,
+              "entire_home_count": 94,
+              "breach_rate": 0.457
+            },
+            {
+              "rank": 5,
+              "geo_key": "la Vila de Gràcia",
+              "listings_impacted": 34,
+              "entire_home_count": 76,
+              "breach_rate": 0.447
+            },
+            {
+              "rank": 6,
+              "geo_key": "Sant Pere, Santa Caterina i la Ribera",
+              "listings_impacted": 31,
+              "entire_home_count": 100,
+              "breach_rate": 0.31
+            },
+            {
+              "rank": 7,
+              "geo_key": "la Nova Esquerra de l'Eixample",
+              "listings_impacted": 31,
+              "entire_home_count": 60,
+              "breach_rate": 0.517
+            },
+            {
+              "rank": 8,
+              "geo_key": "el Raval",
+              "listings_impacted": 28,
+              "entire_home_count": 86,
+              "breach_rate": 0.326
+            },
+            {
+              "rank": 9,
+              "geo_key": "Sant Antoni",
+              "listings_impacted": 26,
+              "entire_home_count": 51,
+              "breach_rate": 0.51
+            },
+            {
+              "rank": 10,
+              "geo_key": "el Poblenou",
+              "listings_impacted": 21,
+              "entire_home_count": 43,
+              "breach_rate": 0.488
+            }
+          ],
+          "cap_60": [
+            {
+              "rank": 1,
+              "geo_key": "la Dreta de l'Eixample",
+              "listings_impacted": 111,
+              "entire_home_count": 201,
+              "breach_rate": 0.552
+            },
+            {
+              "rank": 2,
+              "geo_key": "la Sagrada Família",
+              "listings_impacted": 57,
+              "entire_home_count": 106,
+              "breach_rate": 0.538
+            },
+            {
+              "rank": 3,
+              "geo_key": "el Poble-sec",
+              "listings_impacted": 49,
+              "entire_home_count": 83,
+              "breach_rate": 0.59
+            },
+            {
+              "rank": 4,
+              "geo_key": "l'Antiga Esquerra de l'Eixample",
+              "listings_impacted": 46,
+              "entire_home_count": 94,
+              "breach_rate": 0.489
+            },
+            {
+              "rank": 5,
+              "geo_key": "la Vila de Gràcia",
+              "listings_impacted": 39,
+              "entire_home_count": 76,
+              "breach_rate": 0.513
+            },
+            {
+              "rank": 6,
+              "geo_key": "Sant Pere, Santa Caterina i la Ribera",
+              "listings_impacted": 35,
+              "entire_home_count": 100,
+              "breach_rate": 0.35
+            },
+            {
+              "rank": 7,
+              "geo_key": "la Nova Esquerra de l'Eixample",
+              "listings_impacted": 34,
+              "entire_home_count": 60,
+              "breach_rate": 0.567
+            },
+            {
+              "rank": 8,
+              "geo_key": "el Raval",
+              "listings_impacted": 32,
+              "entire_home_count": 86,
+              "breach_rate": 0.372
+            },
+            {
+              "rank": 9,
+              "geo_key": "Sant Antoni",
+              "listings_impacted": 28,
+              "entire_home_count": 51,
+              "breach_rate": 0.549
+            },
+            {
+              "rank": 10,
+              "geo_key": "Gothic Quarter",
+              "listings_impacted": 23,
+              "entire_home_count": 71,
+              "breach_rate": 0.324
+            }
+          ],
+          "cap_30": [
+            {
+              "rank": 1,
+              "geo_key": "la Dreta de l'Eixample",
+              "listings_impacted": 119,
+              "entire_home_count": 201,
+              "breach_rate": 0.592
+            },
+            {
+              "rank": 2,
+              "geo_key": "la Sagrada Família",
+              "listings_impacted": 61,
+              "entire_home_count": 106,
+              "breach_rate": 0.576
+            },
+            {
+              "rank": 3,
+              "geo_key": "el Poble-sec",
+              "listings_impacted": 54,
+              "entire_home_count": 83,
+              "breach_rate": 0.651
+            },
+            {
+              "rank": 4,
+              "geo_key": "l'Antiga Esquerra de l'Eixample",
+              "listings_impacted": 51,
+              "entire_home_count": 94,
+              "breach_rate": 0.543
+            },
+            {
+              "rank": 5,
+              "geo_key": "la Vila de Gràcia",
+              "listings_impacted": 43,
+              "entire_home_count": 76,
+              "breach_rate": 0.566
+            },
+            {
+              "rank": 6,
+              "geo_key": "Sant Pere, Santa Caterina i la Ribera",
+              "listings_impacted": 40,
+              "entire_home_count": 100,
+              "breach_rate": 0.4
+            },
+            {
+              "rank": 7,
+              "geo_key": "la Nova Esquerra de l'Eixample",
+              "listings_impacted": 36,
+              "entire_home_count": 60,
+              "breach_rate": 0.6
+            },
+            {
+              "rank": 8,
+              "geo_key": "el Raval",
+              "listings_impacted": 35,
+              "entire_home_count": 86,
+              "breach_rate": 0.407
+            },
+            {
+              "rank": 9,
+              "geo_key": "Sant Antoni",
+              "listings_impacted": 29,
+              "entire_home_count": 51,
+              "breach_rate": 0.569
+            },
+            {
+              "rank": 10,
+              "geo_key": "Gothic Quarter",
+              "listings_impacted": 26,
+              "entire_home_count": 71,
+              "breach_rate": 0.366
+            }
+          ]
+        },
+        "london": {
+          "cap_90": [
+            {
+              "rank": 1,
+              "geo_key": "Whitechapel",
+              "listings_impacted": 44,
+              "entire_home_count": 148,
+              "breach_rate": 0.297
+            },
+            {
+              "rank": 2,
+              "geo_key": "Paddington",
+              "listings_impacted": 42,
+              "entire_home_count": 128,
+              "breach_rate": 0.328
+            },
+            {
+              "rank": 3,
+              "geo_key": "Westbourne Green",
+              "listings_impacted": 41,
+              "entire_home_count": 178,
+              "breach_rate": 0.23
+            },
+            {
+              "rank": 4,
+              "geo_key": "Marylebone",
+              "listings_impacted": 35,
+              "entire_home_count": 153,
+              "breach_rate": 0.229
+            },
+            {
+              "rank": 5,
+              "geo_key": "Chelsea",
+              "listings_impacted": 26,
+              "entire_home_count": 112,
+              "breach_rate": 0.232
+            },
+            {
+              "rank": 6,
+              "geo_key": "North Kensington",
+              "listings_impacted": 26,
+              "entire_home_count": 82,
+              "breach_rate": 0.317
+            },
+            {
+              "rank": 7,
+              "geo_key": "Barnsbury",
+              "listings_impacted": 24,
+              "entire_home_count": 77,
+              "breach_rate": 0.312
+            },
+            {
+              "rank": 8,
+              "geo_key": "West Kensington",
+              "listings_impacted": 24,
+              "entire_home_count": 90,
+              "breach_rate": 0.267
+            },
+            {
+              "rank": 9,
+              "geo_key": "Earl's Court",
+              "listings_impacted": 23,
+              "entire_home_count": 145,
+              "breach_rate": 0.159
+            },
+            {
+              "rank": 10,
+              "geo_key": "Shoreditch",
+              "listings_impacted": 23,
+              "entire_home_count": 54,
+              "breach_rate": 0.426
+            }
+          ],
+          "cap_60": [
+            {
+              "rank": 1,
+              "geo_key": "Paddington",
+              "listings_impacted": 51,
+              "entire_home_count": 128,
+              "breach_rate": 0.398
+            },
+            {
+              "rank": 2,
+              "geo_key": "Westbourne Green",
+              "listings_impacted": 48,
+              "entire_home_count": 178,
+              "breach_rate": 0.27
+            },
+            {
+              "rank": 3,
+              "geo_key": "Whitechapel",
+              "listings_impacted": 48,
+              "entire_home_count": 148,
+              "breach_rate": 0.324
+            },
+            {
+              "rank": 4,
+              "geo_key": "Marylebone",
+              "listings_impacted": 38,
+              "entire_home_count": 153,
+              "breach_rate": 0.248
+            },
+            {
+              "rank": 5,
+              "geo_key": "Earl's Court",
+              "listings_impacted": 35,
+              "entire_home_count": 145,
+              "breach_rate": 0.241
+            },
+            {
+              "rank": 6,
+              "geo_key": "Chelsea",
+              "listings_impacted": 33,
+              "entire_home_count": 112,
+              "breach_rate": 0.295
+            },
+            {
+              "rank": 7,
+              "geo_key": "Fulham",
+              "listings_impacted": 33,
+              "entire_home_count": 113,
+              "breach_rate": 0.292
+            },
+            {
+              "rank": 8,
+              "geo_key": "Notting Hill",
+              "listings_impacted": 32,
+              "entire_home_count": 106,
+              "breach_rate": 0.302
+            },
+            {
+              "rank": 9,
+              "geo_key": "West Kensington",
+              "listings_impacted": 30,
+              "entire_home_count": 90,
+              "breach_rate": 0.333
+            },
+            {
+              "rank": 10,
+              "geo_key": "Brompton",
+              "listings_impacted": 28,
+              "entire_home_count": 95,
+              "breach_rate": 0.295
+            }
+          ],
+          "cap_30": [
+            {
+              "rank": 1,
+              "geo_key": "Paddington",
+              "listings_impacted": 58,
+              "entire_home_count": 128,
+              "breach_rate": 0.453
+            },
+            {
+              "rank": 2,
+              "geo_key": "Whitechapel",
+              "listings_impacted": 57,
+              "entire_home_count": 148,
+              "breach_rate": 0.385
+            },
+            {
+              "rank": 3,
+              "geo_key": "Westbourne Green",
+              "listings_impacted": 51,
+              "entire_home_count": 178,
+              "breach_rate": 0.286
+            },
+            {
+              "rank": 4,
+              "geo_key": "Marylebone",
+              "listings_impacted": 48,
+              "entire_home_count": 153,
+              "breach_rate": 0.314
+            },
+            {
+              "rank": 5,
+              "geo_key": "Earl's Court",
+              "listings_impacted": 43,
+              "entire_home_count": 145,
+              "breach_rate": 0.297
+            },
+            {
+              "rank": 6,
+              "geo_key": "Fulham",
+              "listings_impacted": 43,
+              "entire_home_count": 113,
+              "breach_rate": 0.381
+            },
+            {
+              "rank": 7,
+              "geo_key": "Chelsea",
+              "listings_impacted": 42,
+              "entire_home_count": 112,
+              "breach_rate": 0.375
+            },
+            {
+              "rank": 8,
+              "geo_key": "Notting Hill",
+              "listings_impacted": 36,
+              "entire_home_count": 106,
+              "breach_rate": 0.34
+            },
+            {
+              "rank": 9,
+              "geo_key": "Brompton",
+              "listings_impacted": 35,
+              "entire_home_count": 95,
+              "breach_rate": 0.368
+            },
+            {
+              "rank": 10,
+              "geo_key": "West Kensington",
+              "listings_impacted": 34,
+              "entire_home_count": 90,
+              "breach_rate": 0.378
+            }
+          ]
+        }
+      },
+      "reside_top_neighbourhoods_barcelona": [
+        {
+          "rank": 1,
+          "geo_key": "la Dreta de l'Eixample",
+          "reside_unregistered_count": 59,
+          "entire_home_count": 201,
+          "reside_share": 0.293
+        },
+        {
+          "rank": 2,
+          "geo_key": "Sant Pere, Santa Caterina i la Ribera",
+          "reside_unregistered_count": 39,
+          "entire_home_count": 100,
+          "reside_share": 0.39
+        },
+        {
+          "rank": 3,
+          "geo_key": "Gothic Quarter",
+          "reside_unregistered_count": 31,
+          "entire_home_count": 71,
+          "reside_share": 0.437
+        },
+        {
+          "rank": 4,
+          "geo_key": "el Raval",
+          "reside_unregistered_count": 31,
+          "entire_home_count": 86,
+          "reside_share": 0.36
+        },
+        {
+          "rank": 5,
+          "geo_key": "la Sagrada Família",
+          "reside_unregistered_count": 30,
+          "entire_home_count": 106,
+          "reside_share": 0.283
+        },
+        {
+          "rank": 6,
+          "geo_key": "la Vila de Gràcia",
+          "reside_unregistered_count": 20,
+          "entire_home_count": 76,
+          "reside_share": 0.263
+        },
+        {
+          "rank": 7,
+          "geo_key": "la Barceloneta",
+          "reside_unregistered_count": 19,
+          "entire_home_count": 50,
+          "reside_share": 0.38
+        },
+        {
+          "rank": 8,
+          "geo_key": "la Nova Esquerra de l'Eixample",
+          "reside_unregistered_count": 19,
+          "entire_home_count": 60,
+          "reside_share": 0.317
+        },
+        {
+          "rank": 9,
+          "geo_key": "el Poble-sec",
+          "reside_unregistered_count": 18,
+          "entire_home_count": 83,
+          "reside_share": 0.217
+        },
+        {
+          "rank": 10,
+          "geo_key": "l'Antiga Esquerra de l'Eixample",
+          "reside_unregistered_count": 17,
+          "entire_home_count": 94,
+          "reside_share": 0.181
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+city,geo_key,str_density,median_nightly_price
+barcelona,la Dreta de l'Eixample,295,265.6
+barcelona,la Sagrada Família,144,251.4
+barcelona,el Camp d'en Grassot i Gràcia Nova,37,243.2
+barcelona,Sant Antoni,79,219.95
+barcelona,la Vila de Gràcia,104,213.6
+barcelona,el Poble-sec,118,211.2
+barcelona,el Poblenou,59,198.2
+barcelona,la Nova Esquerra de l'Eixample,114,190.3
+barcelona,Sant Gervasi - Galvany,44,182.6
+barcelona,l'Antiga Esquerra de l'Eixample,148,181.7

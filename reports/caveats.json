@@ -1,0 +1,56 @@
+[
+  {
+    "key": "airdna_sample",
+    "title": "AirDNA is a sample, not the full market",
+    "body": "All counts and shares reflect the AirDNA sample (~14% of Barcelona's STR universe, ~10% of London's). Market-wide totals are larger. Present numbers as 'in the AirDNA sample' for honesty.",
+    "applies_to": "all"
+  },
+  {
+    "key": "association_not_causation",
+    "title": "Association, not causation",
+    "body": "High STR density correlates with rent pressure but does NOT prove Airbnb causes rent rises. The tool surfaces risk indicators for policy attention — it does not establish causality.",
+    "applies_to": "all"
+  },
+  {
+    "key": "subdivision_coverage",
+    "title": "Subdivision coverage gaps",
+    "body": "9% of Barcelona and 12% of London listings have no subdivision in raw data. These were rolled up to borough-level via the geo_key fallback (geo_level indicates which resolution). Some neighbourhoods may be undercounted.",
+    "applies_to": "all"
+  },
+  {
+    "key": "professional_management_bias",
+    "title": "Professional-management share is conservative",
+    "body": "~54% of London raw professional_management values were null. The KPI uses only reported cases (professional_management_known == True). Treat the share as a lower bound — true commercialisation may be higher.",
+    "applies_to": "Q3"
+  },
+  {
+    "key": "reside_meaning",
+    "title": "RESIDE flag is Barcelona-only",
+    "body": "reside_unregistered_count counts entire homes without a registration on record. This is regulatorily meaningful for Barcelona (RESIDE phase-out). For London the same number is data context — not a policy breach. Do not present LDN reside_unregistered as a regulatory violation.",
+    "applies_to": "Q7"
+  },
+  {
+    "key": "date_range",
+    "title": "Time coverage",
+    "body": "Data spans March 2021 – February 2026. Emerging-hotspot growth compares the most recent 6 months against the prior 6 months.",
+    "applies_to": "Q5"
+  },
+  {
+    "key": "ldn_geojson_resolution",
+    "title": "London geojson is borough-level",
+    "body": "Choropleth maps for London are at borough level (33 boroughs). Subdivision-level KPIs exist but cannot be mapped without a finer geojson.",
+    "applies_to": "Q6"
+  },
+  {
+    "key": "westminster_subareas",
+    "title": "Westminster sub-areas in AirDNA",
+    "body": "AirDNA records 13 Westminster sub-areas (Mayfair, Belgravia, Paddington, Marylebone, Pimlico etc.) at neighbourhood level rather than rolling them up to Westminster. subdivision_name_map.csv documents the rollup. For Westminster queries, sum the relevant rows.",
+    "applies_to": "Q6"
+  },
+  {
+    "key": "city_of_london_missing",
+    "title": "City of London and Westminster missing from KPI",
+    "body": "The AirDNA sample contains zero listings in 'City of London' (the financial district borough) and listings tagged 'Westminster' directly. Both appear in the geojson but not in our KPI table. The Westminster sub-areas above are where the Westminster activity actually lives.",
+    "applies_to": "Q6"
+  }
+]
