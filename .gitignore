@@ -31,3 +31,10 @@ __pycache__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Member 3 — large derived files
+data/processed/knowledge_layer_interim.csv
+data/processed/barcelona/barcelona_listings_features.csv
+
+# Explicitly track the final knowledge layer
+!data/processed/knowledge_layer.csv
