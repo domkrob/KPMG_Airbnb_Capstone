@@ -14,6 +14,23 @@ raw AirDNA CSV  →  cleaning  →  features  →  neighbourhood KPIs  →  EDA 
 
 Every stage chains off the previous one's output. Notebooks are thin orchestrators; logic lives in `src/`.
 
+## Data Access
+
+Due to GitHub file size limitations, raw datasets are stored externally in Google Drive.
+
+*Barcelona*
+https://drive.google.com/file/d/1GOu1pWMyJjVwVKzp2FeGr8Q9uWlDn05P/view?usp=drive_link
+
+*London*
+https://drive.google.com/file/d/13YEvvOpkpOCpQy5ieHrT7uCyLzH2Tqp2/view?usp=drive_link
+
+Place the datasets in:
+
+data/raw/barcelona/
+data/raw/london/
+
+The notebooks in this repository generate all processed datasets from the raw AirDNA files.
+
 ## Setup
 
 ```powershell
