@@ -689,16 +689,16 @@
           },
           {
             "rank": 2,
-            "geo_key": "la Font de la Guatlla",
-            "prior_active": 9.0,
-            "recent_active": 9.0,
+            "geo_key": "la Sagrera",
+            "prior_active": 5.0,
+            "recent_active": 5.0,
             "active_growth_pct": 0.0
           },
           {
             "rank": 3,
-            "geo_key": "la Sagrera",
-            "prior_active": 5.0,
-            "recent_active": 5.0,
+            "geo_key": "la Font de la Guatlla",
+            "prior_active": 9.0,
+            "recent_active": 9.0,
             "active_growth_pct": 0.0
           },
           {
@@ -754,16 +754,16 @@
           },
           {
             "rank": 6,
-            "geo_key": "Edmonton",
-            "prior_active": 5.0,
-            "recent_active": 5.0,
+            "geo_key": "East Sheen",
+            "prior_active": 6.0,
+            "recent_active": 6.0,
             "active_growth_pct": 0.0
           },
           {
             "rank": 7,
-            "geo_key": "East Sheen",
-            "prior_active": 6.0,
-            "recent_active": 6.0,
+            "geo_key": "Edmonton",
+            "prior_active": 5.0,
+            "recent_active": 5.0,
             "active_growth_pct": 0.0
           },
           {

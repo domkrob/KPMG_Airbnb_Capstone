@@ -28,6 +28,9 @@ data/processed/london/london_listings_clean.csv
 __pycache__/
 *.pyc
 
+# Secrets — never commit API keys
+.env
+
 # System files
 .DS_Store
 Thumbs.db

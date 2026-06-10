@@ -56,3 +56,4 @@ dependencies:
       - streamlit
       - anthropic
       - tiktoken
+      - pdfplumber           # RAG: read regulatory PDFs (Alternative use case)
