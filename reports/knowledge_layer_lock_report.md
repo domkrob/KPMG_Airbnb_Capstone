@@ -1,5 +1,5 @@
 # Knowledge Layer — Lock Report
-_Locked on 2026-06-09_
+_Locked on 2026-06-11_
 
 ## Status
 
@@ -9,7 +9,7 @@ All 19 validation checks **PASS**.
 
 | File | Rows | Cols | Purpose |
 |---|---|---|---|
-| `data/processed/neighbourhood_kpis.csv` | 560 | 25 | Knowledge layer — cluster on this |
+| `data/processed/neighbourhood_kpis.csv` | 560 | 27 | Knowledge layer — cluster on this |
 | `data/processed/barcelona/barcelona_listings_features.csv` | 2,594 | 50 | Per-listing features for the price model |
 | `data/processed/london/london_listings_features.csv` | 9,643 | 50 | Same, for London |
 | `data/processed/data_dictionary.md` | — | — | Column definitions for every file |

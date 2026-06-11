@@ -1,6 +1,6 @@
 # Chatbot Caveats
 
-_Generated on 2026-06-10._
+_Generated on 2026-06-11._
 
 Disclaimers Member 4 must surface in the chatbot. These belong in:
 

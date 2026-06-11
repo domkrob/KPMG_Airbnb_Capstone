@@ -5,8 +5,8 @@ Median entire-home share,barcelona,0.5298
 Median entire-home share,london,0.625
 Median commercial host share,barcelona,0.13419999999999999
 Median commercial host share,london,0.0
-Mean avg_occupancy,barcelona,0.1315
-Mean avg_occupancy,london,0.0857
+Mean avg_occupancy,barcelona,0.12405
+Mean avg_occupancy,london,0.07775
 Median nightly price,barcelona,118.85
 Median nightly price,london,142.75
 Median 90-night breach rate,barcelona,0.4474

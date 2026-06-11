@@ -13,7 +13,7 @@ multi_listing_host_share,float64,Phase B,multi_listing_host_count / str_density.
 median_nightly_price,float64,Phase B,Median TTM nightly rate.,currency,4.6,81.6,Q4 metric.
 p25_price,float64,Phase B,25th percentile nightly rate.,currency,4.6,72.25,
 p75_price,float64,Phase B,75th percentile nightly rate.,currency,4.6,153.75,
-avg_occupancy,float64,Phase B,Mean l90d_occupancy across listings.,ratio 0–1,4.6,0.195,
+avg_occupancy,float64,Phase B,Mean l90d_occupancy across listings in the neighbourhood.,ratio 0–1,0.0,0.195,Defaults to 0.0 (not NaN) when AirDNA has no occupancy data for any listing. Only affects tiny peripheral subdivisions; pair with tier_sample_adequate when reading.
 total_revenue,float64,Phase B,Sum of ttm_revenue across listings.,currency,0.0,154039.0,
 breach_count_90,int64,Phase B,Entire homes with ttm_days_booked > 90.,count,0.0,2,Q7 — listings impacted at a 90-night cap.
 breach_count_60,int64,Phase B,Entire homes with ttm_days_booked > 60.,count,0.0,3,Q7 stretch scenario.
@@ -24,3 +24,5 @@ breach_rate_30,float64,Phase B,breach_count_30 / entire_home_count.,ratio 0–1,
 reside_unregistered_count,int64,Phase B,Entire homes without a registration on record.,count,0.0,0,Q7 RESIDE simulation (BCN-meaningful).
 reside_unregistered_share,float64,Phase B,reside_unregistered_count / entire_home_count.,ratio 0–1,10.7,0.0,BCN-meaningful only.
 professional_management_share,float64,Phase B,"Share of professionally-managed listings, computed only over reported cases.",ratio 0–1,10.7,0.167,Avoids null-imputation bias.
+tier_concentration_price,str,Phase B (mentor update),"Risk tier combining concentration and price: tier_1 (top quartile in both str_density AND median_nightly_price), tier_2 (top quartile in one), tier_3 (neither). Thresholds computed per city.",tier_1|tier_2|tier_3,0.0,tier_3,Drives the 'policy advisor' framing. Reads in pair with tier_sample_adequate.
+tier_sample_adequate,bool,Phase B (mentor update),"True if str_density >= 5 — i.e., enough listings for the tier label to be meaningful.",True/False,0.0,True,Chatbot should caveat tier conclusions for any row where this is False.
