@@ -2,109 +2,150 @@
   "Q1": {
     "question": "Q1 — Which neighbourhoods have the highest concentration of STRs?",
     "method": "Top 10 subdivisions per city by str_density.",
+    "policy_guidance": "These neighbourhoods host the largest STR footprints. Allocate enforcement capacity here first — inspection yield scales with concentration.",
     "answers": {
       "barcelona": [
         {
           "rank": 1,
           "geo_key": "la Dreta de l'Eixample",
-          "str_density": 295
+          "str_density": 295,
+          "tier": "tier_1",
+          "recommended_action": "Priority inspection target (Tier 1 — high concentration AND high price.). 295 listings concentrated here — size enforcement capacity to match."
         },
         {
           "rank": 2,
           "geo_key": "el Raval",
-          "str_density": 203
+          "str_density": 203,
+          "tier": "tier_2",
+          "recommended_action": "Priority inspection target (Tier 2 — elevated on density or price.). 203 listings concentrated here — size enforcement capacity to match."
         },
         {
           "rank": 3,
           "geo_key": "Sant Pere, Santa Caterina i la Ribera",
-          "str_density": 163
+          "str_density": 163,
+          "tier": "tier_2",
+          "recommended_action": "Priority inspection target (Tier 2 — elevated on density or price.). 163 listings concentrated here — size enforcement capacity to match."
         },
         {
           "rank": 4,
           "geo_key": "Gothic Quarter",
-          "str_density": 160
+          "str_density": 160,
+          "tier": "tier_2",
+          "recommended_action": "Priority inspection target (Tier 2 — elevated on density or price.). 160 listings concentrated here — size enforcement capacity to match."
         },
         {
           "rank": 5,
           "geo_key": "l'Antiga Esquerra de l'Eixample",
-          "str_density": 148
+          "str_density": 148,
+          "tier": "tier_2",
+          "recommended_action": "Priority inspection target (Tier 2 — elevated on density or price.). 148 listings concentrated here — size enforcement capacity to match."
         },
         {
           "rank": 6,
           "geo_key": "la Sagrada Família",
-          "str_density": 144
+          "str_density": 144,
+          "tier": "tier_1",
+          "recommended_action": "Priority inspection target (Tier 1 — high concentration AND high price.). 144 listings concentrated here — size enforcement capacity to match."
         },
         {
           "rank": 7,
           "geo_key": "el Poble-sec",
-          "str_density": 118
+          "str_density": 118,
+          "tier": "tier_1",
+          "recommended_action": "Priority inspection target (Tier 1 — high concentration AND high price.). 118 listings concentrated here — size enforcement capacity to match."
         },
         {
           "rank": 8,
           "geo_key": "la Nova Esquerra de l'Eixample",
-          "str_density": 114
+          "str_density": 114,
+          "tier": "tier_2",
+          "recommended_action": "Priority inspection target (Tier 2 — elevated on density or price.). 114 listings concentrated here — size enforcement capacity to match."
         },
         {
           "rank": 9,
           "geo_key": "la Vila de Gràcia",
-          "str_density": 104
+          "str_density": 104,
+          "tier": "tier_1",
+          "recommended_action": "Priority inspection target (Tier 1 — high concentration AND high price.). 104 listings concentrated here — size enforcement capacity to match."
         },
         {
           "rank": 10,
           "geo_key": "Sant Antoni",
-          "str_density": 79
+          "str_density": 79,
+          "tier": "tier_1",
+          "recommended_action": "Priority inspection target (Tier 1 — high concentration AND high price.). 79 listings concentrated here — size enforcement capacity to match."
         }
       ],
       "london": [
         {
           "rank": 1,
           "geo_key": "Whitechapel",
-          "str_density": 242
+          "str_density": 242,
+          "tier": "tier_2",
+          "recommended_action": "Priority inspection target (Tier 2 — elevated on density or price.). 242 listings concentrated here — size enforcement capacity to match."
         },
         {
           "rank": 2,
           "geo_key": "Westbourne Green",
-          "str_density": 210
+          "str_density": 210,
+          "tier": "tier_1",
+          "recommended_action": "Priority inspection target (Tier 1 — high concentration AND high price.). 210 listings concentrated here — size enforcement capacity to match."
         },
         {
           "rank": 3,
           "geo_key": "Marylebone",
-          "str_density": 178
+          "str_density": 178,
+          "tier": "tier_1",
+          "recommended_action": "Priority inspection target (Tier 1 — high concentration AND high price.). 178 listings concentrated here — size enforcement capacity to match."
         },
         {
           "rank": 4,
           "geo_key": "Earl's Court",
-          "str_density": 168
+          "str_density": 168,
+          "tier": "tier_1",
+          "recommended_action": "Priority inspection target (Tier 1 — high concentration AND high price.). 168 listings concentrated here — size enforcement capacity to match."
         },
         {
           "rank": 5,
           "geo_key": "Paddington",
-          "str_density": 152
+          "str_density": 152,
+          "tier": "tier_1",
+          "recommended_action": "Priority inspection target (Tier 1 — high concentration AND high price.). 152 listings concentrated here — size enforcement capacity to match."
         },
         {
           "rank": 6,
           "geo_key": "Fulham",
-          "str_density": 139
+          "str_density": 139,
+          "tier": "tier_1",
+          "recommended_action": "Priority inspection target (Tier 1 — high concentration AND high price.). 139 listings concentrated here — size enforcement capacity to match."
         },
         {
           "rank": 7,
           "geo_key": "West Kensington",
-          "str_density": 127
+          "str_density": 127,
+          "tier": "tier_2",
+          "recommended_action": "Priority inspection target (Tier 2 — elevated on density or price.). 127 listings concentrated here — size enforcement capacity to match."
         },
         {
           "rank": 8,
           "geo_key": "Chelsea",
-          "str_density": 123
+          "str_density": 123,
+          "tier": "tier_1",
+          "recommended_action": "Priority inspection target (Tier 1 — high concentration AND high price.). 123 listings concentrated here — size enforcement capacity to match."
         },
         {
           "rank": 9,
           "geo_key": "Notting Hill",
-          "str_density": 119
+          "str_density": 119,
+          "tier": "tier_1",
+          "recommended_action": "Priority inspection target (Tier 1 — high concentration AND high price.). 119 listings concentrated here — size enforcement capacity to match."
         },
         {
           "rank": 10,
           "geo_key": "London Borough of Ealing",
-          "str_density": 117
+          "str_density": 117,
+          "tier": "tier_2",
+          "recommended_action": "Priority inspection target (Tier 2 — elevated on density or price.). 117 listings concentrated here — size enforcement capacity to match."
         }
       ]
     }
@@ -112,6 +153,7 @@
   "Q2": {
     "question": "Q2 — Where is Airbnb most likely removing homes from the long-term residential market?",
     "method": "Top 10 subdivisions per city by entire_home_share, restricted to neighbourhoods with str_density >= 30.",
+    "policy_guidance": "Entire-home share is the strongest displacement signal. These neighbourhoods are the clearest candidates for change-of-use planning restrictions to recover housing stock.",
     "answers": {
       "barcelona": [
         {
@@ -119,70 +161,80 @@
           "geo_key": "les Corts",
           "str_density": 32,
           "entire_home_count": 28,
-          "entire_home_share": 0.875
+          "entire_home_share": 0.875,
+          "recommended_action": "87.5% of listings are entire homes — strong candidate for change-of-use planning restriction. Recoverable housing units: up to 28."
         },
         {
           "rank": 2,
           "geo_key": "el Camp d'en Grassot i Gràcia Nova",
           "str_density": 37,
           "entire_home_count": 29,
-          "entire_home_share": 0.784
+          "entire_home_share": 0.784,
+          "recommended_action": "78.4% of listings are entire homes — strong candidate for change-of-use planning restriction. Recoverable housing units: up to 29."
         },
         {
           "rank": 3,
           "geo_key": "la Sagrada Família",
           "str_density": 144,
           "entire_home_count": 106,
-          "entire_home_share": 0.736
+          "entire_home_share": 0.736,
+          "recommended_action": "73.6% of listings are entire homes — strong candidate for change-of-use planning restriction. Recoverable housing units: up to 106."
         },
         {
           "rank": 4,
           "geo_key": "la Barceloneta",
           "str_density": 68,
           "entire_home_count": 50,
-          "entire_home_share": 0.735
+          "entire_home_share": 0.735,
+          "recommended_action": "73.5% of listings are entire homes — strong candidate for change-of-use planning restriction. Recoverable housing units: up to 50."
         },
         {
           "rank": 5,
           "geo_key": "la Vila de Gràcia",
           "str_density": 104,
           "entire_home_count": 76,
-          "entire_home_share": 0.731
+          "entire_home_share": 0.731,
+          "recommended_action": "73.1% of listings are entire homes — strong candidate for change-of-use planning restriction. Recoverable housing units: up to 76."
         },
         {
           "rank": 6,
           "geo_key": "el Poblenou",
           "str_density": 59,
           "entire_home_count": 43,
-          "entire_home_share": 0.729
+          "entire_home_share": 0.729,
+          "recommended_action": "72.9% of listings are entire homes — strong candidate for change-of-use planning restriction. Recoverable housing units: up to 43."
         },
         {
           "rank": 7,
           "geo_key": "Sant Gervasi - Galvany",
           "str_density": 44,
           "entire_home_count": 32,
-          "entire_home_share": 0.727
+          "entire_home_share": 0.727,
+          "recommended_action": "72.7% of listings are entire homes — strong candidate for change-of-use planning restriction. Recoverable housing units: up to 32."
         },
         {
           "rank": 8,
           "geo_key": "el Poble-sec",
           "str_density": 118,
           "entire_home_count": 83,
-          "entire_home_share": 0.703
+          "entire_home_share": 0.703,
+          "recommended_action": "70.3% of listings are entire homes — strong candidate for change-of-use planning restriction. Recoverable housing units: up to 83."
         },
         {
           "rank": 9,
           "geo_key": "la Dreta de l'Eixample",
           "str_density": 295,
           "entire_home_count": 201,
-          "entire_home_share": 0.681
+          "entire_home_share": 0.681,
+          "recommended_action": "68.1% of listings are entire homes — strong candidate for change-of-use planning restriction. Recoverable housing units: up to 201."
         },
         {
           "rank": 10,
           "geo_key": "Sant Antoni",
           "str_density": 79,
           "entire_home_count": 51,
-          "entire_home_share": 0.646
+          "entire_home_share": 0.646,
+          "recommended_action": "64.6% of listings are entire homes — strong candidate for change-of-use planning restriction. Recoverable housing units: up to 51."
         }
       ],
       "london": [
@@ -191,70 +243,80 @@
           "geo_key": "Brompton",
           "str_density": 100,
           "entire_home_count": 95,
-          "entire_home_share": 0.95
+          "entire_home_share": 0.95,
+          "recommended_action": "95.0% of listings are entire homes — strong candidate for change-of-use planning restriction. Recoverable housing units: up to 95."
         },
         {
           "rank": 2,
           "geo_key": "London Borough of Wandsworth",
           "str_density": 36,
           "entire_home_count": 34,
-          "entire_home_share": 0.944
+          "entire_home_share": 0.944,
+          "recommended_action": "94.4% of listings are entire homes — strong candidate for change-of-use planning restriction. Recoverable housing units: up to 34."
         },
         {
           "rank": 3,
           "geo_key": "Mayfair",
           "str_density": 33,
           "entire_home_count": 31,
-          "entire_home_share": 0.939
+          "entire_home_share": 0.939,
+          "recommended_action": "93.9% of listings are entire homes — strong candidate for change-of-use planning restriction. Recoverable housing units: up to 31."
         },
         {
           "rank": 4,
           "geo_key": "Chelsea",
           "str_density": 123,
           "entire_home_count": 112,
-          "entire_home_share": 0.911
+          "entire_home_share": 0.911,
+          "recommended_action": "91.1% of listings are entire homes — strong candidate for change-of-use planning restriction. Recoverable housing units: up to 112."
         },
         {
           "rank": 5,
           "geo_key": "Notting Hill",
           "str_density": 119,
           "entire_home_count": 106,
-          "entire_home_share": 0.891
+          "entire_home_share": 0.891,
+          "recommended_action": "89.1% of listings are entire homes — strong candidate for change-of-use planning restriction. Recoverable housing units: up to 106."
         },
         {
           "rank": 6,
           "geo_key": "South Kensington",
           "str_density": 87,
           "entire_home_count": 76,
-          "entire_home_share": 0.874
+          "entire_home_share": 0.874,
+          "recommended_action": "87.4% of listings are entire homes — strong candidate for change-of-use planning restriction. Recoverable housing units: up to 76."
         },
         {
           "rank": 7,
           "geo_key": "Holborn",
           "str_density": 74,
           "entire_home_count": 64,
-          "entire_home_share": 0.865
+          "entire_home_share": 0.865,
+          "recommended_action": "86.5% of listings are entire homes — strong candidate for change-of-use planning restriction. Recoverable housing units: up to 64."
         },
         {
           "rank": 8,
           "geo_key": "Earl's Court",
           "str_density": 168,
           "entire_home_count": 145,
-          "entire_home_share": 0.863
+          "entire_home_share": 0.863,
+          "recommended_action": "86.3% of listings are entire homes — strong candidate for change-of-use planning restriction. Recoverable housing units: up to 145."
         },
         {
           "rank": 9,
           "geo_key": "Marylebone",
           "str_density": 178,
           "entire_home_count": 153,
-          "entire_home_share": 0.86
+          "entire_home_share": 0.86,
+          "recommended_action": "86.0% of listings are entire homes — strong candidate for change-of-use planning restriction. Recoverable housing units: up to 153."
         },
         {
           "rank": 10,
           "geo_key": "Shoreditch",
           "str_density": 63,
           "entire_home_count": 54,
-          "entire_home_share": 0.857
+          "entire_home_share": 0.857,
+          "recommended_action": "85.7% of listings are entire homes — strong candidate for change-of-use planning restriction. Recoverable housing units: up to 54."
         }
       ]
     }
@@ -262,6 +324,7 @@
   "Q3": {
     "question": "Q3 — Which neighbourhoods are dominated by commercial/professional hosts?",
     "method": "Top 10 subdivisions per city by commercial_host_share (commercial+super_commercial tiers, ≥5 listings/host), restricted to str_density >= 30.",
+    "policy_guidance": "Concentration of commercial hosts (≥5 listings each) signals professional letting operations rather than casual home-sharing. Compliance audits here have the highest yield per inspector-hour.",
     "answers": {
       "barcelona": [
         {
@@ -269,70 +332,80 @@
           "geo_key": "la Nova Esquerra de l'Eixample",
           "str_density": 114,
           "commercial_host_share": 0.404,
-          "multi_listing_host_share": 0.57
+          "multi_listing_host_share": 0.57,
+          "recommended_action": "40.4% of listings owned by commercial-scale hosts. Focus commercial-letting compliance audits and licensing checks here."
         },
         {
           "rank": 2,
           "geo_key": "el Poble-sec",
           "str_density": 118,
           "commercial_host_share": 0.364,
-          "multi_listing_host_share": 0.559
+          "multi_listing_host_share": 0.559,
+          "recommended_action": "36.4% of listings owned by commercial-scale hosts. Focus commercial-letting compliance audits and licensing checks here."
         },
         {
           "rank": 3,
           "geo_key": "l'Antiga Esquerra de l'Eixample",
           "str_density": 148,
           "commercial_host_share": 0.345,
-          "multi_listing_host_share": 0.635
+          "multi_listing_host_share": 0.635,
+          "recommended_action": "34.5% of listings owned by commercial-scale hosts. Focus commercial-letting compliance audits and licensing checks here."
         },
         {
           "rank": 4,
           "geo_key": "Sant Antoni",
           "str_density": 79,
           "commercial_host_share": 0.329,
-          "multi_listing_host_share": 0.595
+          "multi_listing_host_share": 0.595,
+          "recommended_action": "32.9% of listings owned by commercial-scale hosts. Focus commercial-letting compliance audits and licensing checks here."
         },
         {
           "rank": 5,
           "geo_key": "Sant Gervasi - Galvany",
           "str_density": 44,
           "commercial_host_share": 0.318,
-          "multi_listing_host_share": 0.659
+          "multi_listing_host_share": 0.659,
+          "recommended_action": "31.8% of listings owned by commercial-scale hosts. Focus commercial-letting compliance audits and licensing checks here."
         },
         {
           "rank": 6,
           "geo_key": "la Sagrada Família",
           "str_density": 144,
           "commercial_host_share": 0.285,
-          "multi_listing_host_share": 0.479
+          "multi_listing_host_share": 0.479,
+          "recommended_action": "28.5% of listings owned by commercial-scale hosts. Focus commercial-letting compliance audits and licensing checks here."
         },
         {
           "rank": 7,
           "geo_key": "Hostafrancs",
           "str_density": 32,
           "commercial_host_share": 0.281,
-          "multi_listing_host_share": 0.469
+          "multi_listing_host_share": 0.469,
+          "recommended_action": "28.1% of listings owned by commercial-scale hosts. Focus commercial-letting compliance audits and licensing checks here."
         },
         {
           "rank": 8,
           "geo_key": "el Fort Pienc",
           "str_density": 67,
           "commercial_host_share": 0.269,
-          "multi_listing_host_share": 0.522
+          "multi_listing_host_share": 0.522,
+          "recommended_action": "26.9% of listings owned by commercial-scale hosts. Focus commercial-letting compliance audits and licensing checks here."
         },
         {
           "rank": 9,
           "geo_key": "la Dreta de l'Eixample",
           "str_density": 295,
           "commercial_host_share": 0.264,
-          "multi_listing_host_share": 0.651
+          "multi_listing_host_share": 0.651,
+          "recommended_action": "26.4% of listings owned by commercial-scale hosts. Focus commercial-letting compliance audits and licensing checks here."
         },
         {
           "rank": 10,
           "geo_key": "la Vila de Gràcia",
           "str_density": 104,
           "commercial_host_share": 0.25,
-          "multi_listing_host_share": 0.519
+          "multi_listing_host_share": 0.519,
+          "recommended_action": "25.0% of listings owned by commercial-scale hosts. Focus commercial-letting compliance audits and licensing checks here."
         }
       ],
       "london": [
@@ -341,145 +414,182 @@
           "geo_key": "Bayswater",
           "str_density": 31,
           "commercial_host_share": 0.387,
-          "multi_listing_host_share": 0.645
+          "multi_listing_host_share": 0.645,
+          "recommended_action": "38.7% of listings owned by commercial-scale hosts. Focus commercial-letting compliance audits and licensing checks here."
         },
         {
           "rank": 2,
           "geo_key": "Notting Hill",
           "str_density": 119,
           "commercial_host_share": 0.37,
-          "multi_listing_host_share": 0.538
+          "multi_listing_host_share": 0.538,
+          "recommended_action": "37.0% of listings owned by commercial-scale hosts. Focus commercial-letting compliance audits and licensing checks here."
         },
         {
           "rank": 3,
           "geo_key": "Earl's Court",
           "str_density": 168,
           "commercial_host_share": 0.357,
-          "multi_listing_host_share": 0.607
+          "multi_listing_host_share": 0.607,
+          "recommended_action": "35.7% of listings owned by commercial-scale hosts. Focus commercial-letting compliance audits and licensing checks here."
         },
         {
           "rank": 4,
           "geo_key": "Brondesbury",
           "str_density": 55,
           "commercial_host_share": 0.309,
-          "multi_listing_host_share": 0.582
+          "multi_listing_host_share": 0.582,
+          "recommended_action": "30.9% of listings owned by commercial-scale hosts. Focus commercial-letting compliance audits and licensing checks here."
         },
         {
           "rank": 5,
           "geo_key": "Mayfair",
           "str_density": 33,
           "commercial_host_share": 0.303,
-          "multi_listing_host_share": 0.727
+          "multi_listing_host_share": 0.727,
+          "recommended_action": "30.3% of listings owned by commercial-scale hosts. Focus commercial-letting compliance audits and licensing checks here."
         },
         {
           "rank": 6,
           "geo_key": "Paddington",
           "str_density": 152,
           "commercial_host_share": 0.289,
-          "multi_listing_host_share": 0.52
+          "multi_listing_host_share": 0.52,
+          "recommended_action": "28.9% of listings owned by commercial-scale hosts. Focus commercial-letting compliance audits and licensing checks here."
         },
         {
           "rank": 7,
           "geo_key": "South Kensington",
           "str_density": 87,
           "commercial_host_share": 0.287,
-          "multi_listing_host_share": 0.609
+          "multi_listing_host_share": 0.609,
+          "recommended_action": "28.7% of listings owned by commercial-scale hosts. Focus commercial-letting compliance audits and licensing checks here."
         },
         {
           "rank": 8,
           "geo_key": "South Hampstead",
           "str_density": 36,
           "commercial_host_share": 0.278,
-          "multi_listing_host_share": 0.444
+          "multi_listing_host_share": 0.444,
+          "recommended_action": "27.8% of listings owned by commercial-scale hosts. Focus commercial-letting compliance audits and licensing checks here."
         },
         {
           "rank": 9,
           "geo_key": "London Borough of Brent",
           "str_density": 59,
           "commercial_host_share": 0.271,
-          "multi_listing_host_share": 0.407
+          "multi_listing_host_share": 0.407,
+          "recommended_action": "27.1% of listings owned by commercial-scale hosts. Focus commercial-letting compliance audits and licensing checks here."
         },
         {
           "rank": 10,
           "geo_key": "King's Cross",
           "str_density": 85,
           "commercial_host_share": 0.271,
-          "multi_listing_host_share": 0.6
+          "multi_listing_host_share": 0.6,
+          "recommended_action": "27.1% of listings owned by commercial-scale hosts. Focus commercial-letting compliance audits and licensing checks here."
         }
       ]
     }
   },
   "Q4": {
     "question": "Q4 — In which neighbourhoods does high STR density coincide with high prices?",
-    "method": "Subdivisions in top quartile of BOTH str_density AND median_nightly_price per city (str_density >= 30).",
+    "method": "Subdivisions in top quartile of BOTH str_density AND median_nightly_price per city (str_density >= 30). These are the tier-1 areas — see tier_concentration_price column for the full classification.",
+    "policy_guidance": "Tier-1 neighbourhoods carry both volume and revenue intensity. Enforcement here delivers the largest market signal — high visibility to the industry, high recovery of housing units, and strong public-interest defensibility.",
     "answers": {
       "barcelona": [
         {
           "geo_key": "la Dreta de l'Eixample",
           "str_density": 295,
-          "median_nightly_price": 265.6
+          "median_nightly_price": 265.6,
+          "tier": "tier_1",
+          "recommended_action": "Tier 1 priority. 295 listings at €/£266 median nightly — lead with this area in any phased enforcement rollout."
         }
       ],
       "london": [
         {
           "geo_key": "Westbourne Green",
           "str_density": 210,
-          "median_nightly_price": 250.2
+          "median_nightly_price": 250.2,
+          "tier": "tier_1",
+          "recommended_action": "Tier 1 priority. 210 listings at €/£250 median nightly — lead with this area in any phased enforcement rollout."
         },
         {
           "geo_key": "Marylebone",
           "str_density": 178,
-          "median_nightly_price": 273.4
+          "median_nightly_price": 273.4,
+          "tier": "tier_1",
+          "recommended_action": "Tier 1 priority. 178 listings at €/£273 median nightly — lead with this area in any phased enforcement rollout."
         },
         {
           "geo_key": "Earl's Court",
           "str_density": 168,
-          "median_nightly_price": 245.2
+          "median_nightly_price": 245.2,
+          "tier": "tier_1",
+          "recommended_action": "Tier 1 priority. 168 listings at €/£245 median nightly — lead with this area in any phased enforcement rollout."
         },
         {
           "geo_key": "Paddington",
           "str_density": 152,
-          "median_nightly_price": 301.5
+          "median_nightly_price": 301.5,
+          "tier": "tier_1",
+          "recommended_action": "Tier 1 priority. 152 listings at €/£302 median nightly — lead with this area in any phased enforcement rollout."
         },
         {
           "geo_key": "Fulham",
           "str_density": 139,
-          "median_nightly_price": 235.7
+          "median_nightly_price": 235.7,
+          "tier": "tier_1",
+          "recommended_action": "Tier 1 priority. 139 listings at €/£236 median nightly — lead with this area in any phased enforcement rollout."
         },
         {
           "geo_key": "Chelsea",
           "str_density": 123,
-          "median_nightly_price": 405.2
+          "median_nightly_price": 405.2,
+          "tier": "tier_1",
+          "recommended_action": "Tier 1 priority. 123 listings at €/£405 median nightly — lead with this area in any phased enforcement rollout."
         },
         {
           "geo_key": "Notting Hill",
           "str_density": 119,
-          "median_nightly_price": 234.1
+          "median_nightly_price": 234.1,
+          "tier": "tier_1",
+          "recommended_action": "Tier 1 priority. 119 listings at €/£234 median nightly — lead with this area in any phased enforcement rollout."
         },
         {
           "geo_key": "Fitzrovia",
           "str_density": 104,
-          "median_nightly_price": 224.8
+          "median_nightly_price": 224.8,
+          "tier": "tier_1",
+          "recommended_action": "Tier 1 priority. 104 listings at €/£225 median nightly — lead with this area in any phased enforcement rollout."
         },
         {
           "geo_key": "Brompton",
           "str_density": 100,
-          "median_nightly_price": 306.6
+          "median_nightly_price": 306.6,
+          "tier": "tier_1",
+          "recommended_action": "Tier 1 priority. 100 listings at €/£307 median nightly — lead with this area in any phased enforcement rollout."
         },
         {
           "geo_key": "South Kensington",
           "str_density": 87,
-          "median_nightly_price": 409.9
+          "median_nightly_price": 409.9,
+          "tier": "tier_1",
+          "recommended_action": "Tier 1 priority. 87 listings at €/£410 median nightly — lead with this area in any phased enforcement rollout."
         },
         {
           "geo_key": "Holborn",
           "str_density": 74,
-          "median_nightly_price": 299.9
+          "median_nightly_price": 299.9,
+          "tier": "tier_1",
+          "recommended_action": "Tier 1 priority. 74 listings at €/£300 median nightly — lead with this area in any phased enforcement rollout."
         },
         {
           "geo_key": "Kensington",
           "str_density": 74,
-          "median_nightly_price": 273.7
+          "median_nightly_price": 273.7,
+          "tier": "tier_1",
+          "recommended_action": "Tier 1 priority. 74 listings at €/£274 median nightly — lead with this area in any phased enforcement rollout."
         }
       ]
     },
@@ -491,6 +601,7 @@
   "Q5": {
     "question": "Q5 — Which neighbourhoods are saturated, and which are emerging hotspots?",
     "method": "Saturated = composite of high density + entire-home share + commercial-host share + occupancy. Emerging = top active-listing growth (recent 6 mo vs prior 6 mo). Member 3 will replace the saturated heuristic with the proper KMeans cluster label.",
+    "policy_guidance": "Saturated areas need SUSTAINED presence to prevent backslide. Emerging areas benefit from PRE-EMPTIVE action — intervention is cheaper and more politically tractable before saturation sets in.",
     "answers": {
       "saturated": {
         "barcelona": [
@@ -501,7 +612,8 @@
             "entire_home_share": 0.681,
             "commercial_host_share": 0.264,
             "avg_occupancy": 0.23,
-            "saturation_score": 4.21
+            "saturation_score": 4.21,
+            "recommended_action": "Saturated — maintain visible enforcement; monitor for displacement to adjacent neighbourhoods; resist political pressure to relax existing rules."
           },
           {
             "rank": 2,
@@ -510,7 +622,8 @@
             "entire_home_share": 0.703,
             "commercial_host_share": 0.364,
             "avg_occupancy": 0.233,
-            "saturation_score": 3.06
+            "saturation_score": 3.06,
+            "recommended_action": "Saturated — maintain visible enforcement; monitor for displacement to adjacent neighbourhoods; resist political pressure to relax existing rules."
           },
           {
             "rank": 3,
@@ -519,7 +632,8 @@
             "entire_home_share": 0.736,
             "commercial_host_share": 0.285,
             "avg_occupancy": 0.245,
-            "saturation_score": 2.98
+            "saturation_score": 2.98,
+            "recommended_action": "Saturated — maintain visible enforcement; monitor for displacement to adjacent neighbourhoods; resist political pressure to relax existing rules."
           },
           {
             "rank": 4,
@@ -528,7 +642,8 @@
             "entire_home_share": 0.635,
             "commercial_host_share": 0.345,
             "avg_occupancy": 0.206,
-            "saturation_score": 2.26
+            "saturation_score": 2.26,
+            "recommended_action": "Saturated — maintain visible enforcement; monitor for displacement to adjacent neighbourhoods; resist political pressure to relax existing rules."
           },
           {
             "rank": 5,
@@ -537,7 +652,8 @@
             "entire_home_share": 0.526,
             "commercial_host_share": 0.404,
             "avg_occupancy": 0.241,
-            "saturation_score": 2.2
+            "saturation_score": 2.2,
+            "recommended_action": "Saturated — maintain visible enforcement; monitor for displacement to adjacent neighbourhoods; resist political pressure to relax existing rules."
           },
           {
             "rank": 6,
@@ -546,7 +662,8 @@
             "entire_home_share": 0.731,
             "commercial_host_share": 0.25,
             "avg_occupancy": 0.228,
-            "saturation_score": 1.67
+            "saturation_score": 1.67,
+            "recommended_action": "Saturated — maintain visible enforcement; monitor for displacement to adjacent neighbourhoods; resist political pressure to relax existing rules."
           },
           {
             "rank": 7,
@@ -555,7 +672,8 @@
             "entire_home_share": 0.784,
             "commercial_host_share": 0.135,
             "avg_occupancy": 0.32,
-            "saturation_score": 1.4
+            "saturation_score": 1.4,
+            "recommended_action": "Saturated — maintain visible enforcement; monitor for displacement to adjacent neighbourhoods; resist political pressure to relax existing rules."
           },
           {
             "rank": 8,
@@ -564,7 +682,8 @@
             "entire_home_share": 0.646,
             "commercial_host_share": 0.329,
             "avg_occupancy": 0.217,
-            "saturation_score": 1.37
+            "saturation_score": 1.37,
+            "recommended_action": "Saturated — maintain visible enforcement; monitor for displacement to adjacent neighbourhoods; resist political pressure to relax existing rules."
           },
           {
             "rank": 9,
@@ -573,7 +692,8 @@
             "entire_home_share": 0.727,
             "commercial_host_share": 0.318,
             "avg_occupancy": 0.168,
-            "saturation_score": 0.54
+            "saturation_score": 0.54,
+            "recommended_action": "Saturated — maintain visible enforcement; monitor for displacement to adjacent neighbourhoods; resist political pressure to relax existing rules."
           },
           {
             "rank": 10,
@@ -582,7 +702,8 @@
             "entire_home_share": 0.875,
             "commercial_host_share": 0.25,
             "avg_occupancy": 0.139,
-            "saturation_score": 0.25
+            "saturation_score": 0.25,
+            "recommended_action": "Saturated — maintain visible enforcement; monitor for displacement to adjacent neighbourhoods; resist political pressure to relax existing rules."
           }
         ],
         "london": [
@@ -593,7 +714,8 @@
             "entire_home_share": 0.891,
             "commercial_host_share": 0.37,
             "avg_occupancy": 0.161,
-            "saturation_score": 6.36
+            "saturation_score": 6.36,
+            "recommended_action": "Saturated — maintain visible enforcement; monitor for displacement to adjacent neighbourhoods; resist political pressure to relax existing rules."
           },
           {
             "rank": 2,
@@ -602,7 +724,8 @@
             "entire_home_share": 0.863,
             "commercial_host_share": 0.357,
             "avg_occupancy": 0.105,
-            "saturation_score": 6.18
+            "saturation_score": 6.18,
+            "recommended_action": "Saturated — maintain visible enforcement; monitor for displacement to adjacent neighbourhoods; resist political pressure to relax existing rules."
           },
           {
             "rank": 3,
@@ -611,7 +734,8 @@
             "entire_home_share": 0.848,
             "commercial_host_share": 0.262,
             "avg_occupancy": 0.106,
-            "saturation_score": 6.14
+            "saturation_score": 6.14,
+            "recommended_action": "Saturated — maintain visible enforcement; monitor for displacement to adjacent neighbourhoods; resist political pressure to relax existing rules."
           },
           {
             "rank": 4,
@@ -620,7 +744,8 @@
             "entire_home_share": 0.842,
             "commercial_host_share": 0.289,
             "avg_occupancy": 0.167,
-            "saturation_score": 6.08
+            "saturation_score": 6.08,
+            "recommended_action": "Saturated — maintain visible enforcement; monitor for displacement to adjacent neighbourhoods; resist political pressure to relax existing rules."
           },
           {
             "rank": 5,
@@ -629,7 +754,8 @@
             "entire_home_share": 0.612,
             "commercial_host_share": 0.157,
             "avg_occupancy": 0.17,
-            "saturation_score": 5.16
+            "saturation_score": 5.16,
+            "recommended_action": "Saturated — maintain visible enforcement; monitor for displacement to adjacent neighbourhoods; resist political pressure to relax existing rules."
           },
           {
             "rank": 6,
@@ -638,7 +764,8 @@
             "entire_home_share": 0.86,
             "commercial_host_share": 0.191,
             "avg_occupancy": 0.112,
-            "saturation_score": 4.74
+            "saturation_score": 4.74,
+            "recommended_action": "Saturated — maintain visible enforcement; monitor for displacement to adjacent neighbourhoods; resist political pressure to relax existing rules."
           },
           {
             "rank": 7,
@@ -647,7 +774,8 @@
             "entire_home_share": 0.911,
             "commercial_host_share": 0.268,
             "avg_occupancy": 0.106,
-            "saturation_score": 4.44
+            "saturation_score": 4.44,
+            "recommended_action": "Saturated — maintain visible enforcement; monitor for displacement to adjacent neighbourhoods; resist political pressure to relax existing rules."
           },
           {
             "rank": 8,
@@ -656,7 +784,8 @@
             "entire_home_share": 0.874,
             "commercial_host_share": 0.287,
             "avg_occupancy": 0.145,
-            "saturation_score": 4.19
+            "saturation_score": 4.19,
+            "recommended_action": "Saturated — maintain visible enforcement; monitor for displacement to adjacent neighbourhoods; resist political pressure to relax existing rules."
           },
           {
             "rank": 9,
@@ -665,7 +794,8 @@
             "entire_home_share": 0.857,
             "commercial_host_share": 0.222,
             "avg_occupancy": 0.217,
-            "saturation_score": 4.14
+            "saturation_score": 4.14,
+            "recommended_action": "Saturated — maintain visible enforcement; monitor for displacement to adjacent neighbourhoods; resist political pressure to relax existing rules."
           },
           {
             "rank": 10,
@@ -674,7 +804,8 @@
             "entire_home_share": 0.767,
             "commercial_host_share": 0.267,
             "avg_occupancy": 0.259,
-            "saturation_score": 3.87
+            "saturation_score": 3.87,
+            "recommended_action": "Saturated — maintain visible enforcement; monitor for displacement to adjacent neighbourhoods; resist political pressure to relax existing rules."
           }
         ]
       },
@@ -685,35 +816,40 @@
             "geo_key": "Can Baró",
             "prior_active": 5.0,
             "recent_active": 6.0,
-            "active_growth_pct": 20.0
+            "active_growth_pct": 20.0,
+            "recommended_action": "Emerging hotspot (+20% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement."
           },
           {
             "rank": 2,
-            "geo_key": "la Sagrera",
-            "prior_active": 5.0,
-            "recent_active": 5.0,
-            "active_growth_pct": 0.0
-          },
-          {
-            "rank": 3,
             "geo_key": "la Font de la Guatlla",
             "prior_active": 9.0,
             "recent_active": 9.0,
-            "active_growth_pct": 0.0
+            "active_growth_pct": 0.0,
+            "recommended_action": "Emerging hotspot (+0% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement."
+          },
+          {
+            "rank": 3,
+            "geo_key": "la Sagrera",
+            "prior_active": 5.0,
+            "recent_active": 5.0,
+            "active_growth_pct": 0.0,
+            "recommended_action": "Emerging hotspot (+0% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement."
           },
           {
             "rank": 4,
             "geo_key": "les Corts",
             "prior_active": 21.5,
             "recent_active": 21.2,
-            "active_growth_pct": -1.6
+            "active_growth_pct": -1.6,
+            "recommended_action": "Emerging hotspot (+-2% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement."
           },
           {
             "rank": 5,
             "geo_key": "el Baix Guinardó",
             "prior_active": 12.0,
             "recent_active": 11.2,
-            "active_growth_pct": -6.9
+            "active_growth_pct": -6.9,
+            "recommended_action": "Emerging hotspot (+-7% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement."
           }
         ],
         "london": [
@@ -722,70 +858,80 @@
             "geo_key": "Greenford",
             "prior_active": 5.0,
             "recent_active": 5.7,
-            "active_growth_pct": 13.3
+            "active_growth_pct": 13.3,
+            "recommended_action": "Emerging hotspot (+13% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement."
           },
           {
             "rank": 2,
             "geo_key": "Abbey Wood",
             "prior_active": 5.8,
             "recent_active": 6.5,
-            "active_growth_pct": 11.4
+            "active_growth_pct": 11.4,
+            "recommended_action": "Emerging hotspot (+11% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement."
           },
           {
             "rank": 3,
             "geo_key": "Gants Hill",
             "prior_active": 5.0,
             "recent_active": 5.5,
-            "active_growth_pct": 10.0
+            "active_growth_pct": 10.0,
+            "recommended_action": "Emerging hotspot (+10% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement."
           },
           {
             "rank": 4,
             "geo_key": "North Sheen",
             "prior_active": 9.8,
             "recent_active": 10.0,
-            "active_growth_pct": 1.7
+            "active_growth_pct": 1.7,
+            "recommended_action": "Emerging hotspot (+2% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement."
           },
           {
             "rank": 5,
             "geo_key": "Earlsfield",
             "prior_active": 13.5,
             "recent_active": 13.7,
-            "active_growth_pct": 1.2
+            "active_growth_pct": 1.2,
+            "recommended_action": "Emerging hotspot (+1% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement."
           },
           {
             "rank": 6,
-            "geo_key": "East Sheen",
-            "prior_active": 6.0,
-            "recent_active": 6.0,
-            "active_growth_pct": 0.0
-          },
-          {
-            "rank": 7,
             "geo_key": "Edmonton",
             "prior_active": 5.0,
             "recent_active": 5.0,
-            "active_growth_pct": 0.0
+            "active_growth_pct": 0.0,
+            "recommended_action": "Emerging hotspot (+0% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement."
+          },
+          {
+            "rank": 7,
+            "geo_key": "East Sheen",
+            "prior_active": 6.0,
+            "recent_active": 6.0,
+            "active_growth_pct": 0.0,
+            "recommended_action": "Emerging hotspot (+0% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement."
           },
           {
             "rank": 8,
             "geo_key": "Finchley",
             "prior_active": 8.3,
             "recent_active": 8.2,
-            "active_growth_pct": -2.0
+            "active_growth_pct": -2.0,
+            "recommended_action": "Emerging hotspot (+-2% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement."
           },
           {
             "rank": 9,
             "geo_key": "Highams Park",
             "prior_active": 9.5,
             "recent_active": 9.2,
-            "active_growth_pct": -3.5
+            "active_growth_pct": -3.5,
+            "recommended_action": "Emerging hotspot (+-4% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement."
           },
           {
             "rank": 10,
             "geo_key": "Selhurst",
             "prior_active": 9.0,
             "recent_active": 8.7,
-            "active_growth_pct": -3.7
+            "active_growth_pct": -3.7,
+            "recommended_action": "Emerging hotspot (+-4% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement."
           }
         ]
       }
@@ -794,6 +940,7 @@
   "Q6": {
     "question": "Q6 — How does STR pressure compare between Barcelona and London?",
     "method": "Side-by-side comparison of citywide totals and neighbourhood-level medians.",
+    "policy_guidance": "Barcelona's RESIDE phase-out is the stronger regulatory instrument and is reflected in lower commercialisation per neighbourhood. London's 90-night cap is comparatively permissive — use this contrast when sizing the political ambition of any proposed change.",
     "answers": {
       "citywide_totals": {
         "barcelona": {
@@ -830,7 +977,7 @@
           "str_density": 10.0,
           "entire_home_share": 0.53,
           "commercial_host_share": 0.134,
-          "avg_occupancy": 0.132,
+          "avg_occupancy": 0.124,
           "median_nightly_price": 118.85,
           "breach_rate_90": 0.447
         },
@@ -838,7 +985,7 @@
           "str_density": 8.0,
           "entire_home_share": 0.625,
           "commercial_host_share": 0.0,
-          "avg_occupancy": 0.086,
+          "avg_occupancy": 0.078,
           "median_nightly_price": 142.75,
           "breach_rate_90": 0.188
         }
@@ -848,6 +995,7 @@
   "Q7": {
     "question": "Q7 — If entire-home listings were capped at X nights/year, how many listings and which neighbourhoods would be affected?",
     "method": "Sum of breach_count_{cap} per city (city totals), plus top-impacted neighbourhoods per cap per city. RESIDE simulation: count of reside_unregistered listings per Barcelona neighbourhood (entire homes without registration on record).",
+    "policy_guidance": "Q7 is the flagship policy decision. The cap-level choice should be sized to enforcement capacity, not theoretical recovery — under-resourced enforcement erodes regulatory credibility. Sequence rollout starting with tier-1 neighbourhoods to maximise early signal.",
     "answers": {
       "city_totals": {
         "barcelona": {
@@ -875,70 +1023,90 @@
               "geo_key": "la Dreta de l'Eixample",
               "listings_impacted": 95,
               "entire_home_count": 201,
-              "breach_rate": 0.473
+              "breach_rate": 0.473,
+              "tier": "tier_1",
+              "recommended_action": "At 90-night cap, 95 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 2,
               "geo_key": "la Sagrada Família",
               "listings_impacted": 53,
               "entire_home_count": 106,
-              "breach_rate": 0.5
+              "breach_rate": 0.5,
+              "tier": "tier_1",
+              "recommended_action": "At 90-night cap, 53 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 3,
               "geo_key": "el Poble-sec",
               "listings_impacted": 46,
               "entire_home_count": 83,
-              "breach_rate": 0.554
+              "breach_rate": 0.554,
+              "tier": "tier_1",
+              "recommended_action": "At 90-night cap, 46 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 4,
               "geo_key": "l'Antiga Esquerra de l'Eixample",
               "listings_impacted": 43,
               "entire_home_count": 94,
-              "breach_rate": 0.457
+              "breach_rate": 0.457,
+              "tier": "tier_2",
+              "recommended_action": "At 90-night cap, 43 listings recoverable here (Tier 2 — elevated on density or price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 5,
               "geo_key": "la Vila de Gràcia",
               "listings_impacted": 34,
               "entire_home_count": 76,
-              "breach_rate": 0.447
+              "breach_rate": 0.447,
+              "tier": "tier_1",
+              "recommended_action": "At 90-night cap, 34 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 6,
               "geo_key": "Sant Pere, Santa Caterina i la Ribera",
               "listings_impacted": 31,
               "entire_home_count": 100,
-              "breach_rate": 0.31
+              "breach_rate": 0.31,
+              "tier": "tier_2",
+              "recommended_action": "At 90-night cap, 31 listings recoverable here (Tier 2 — elevated on density or price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 7,
               "geo_key": "la Nova Esquerra de l'Eixample",
               "listings_impacted": 31,
               "entire_home_count": 60,
-              "breach_rate": 0.517
+              "breach_rate": 0.517,
+              "tier": "tier_2",
+              "recommended_action": "At 90-night cap, 31 listings recoverable here (Tier 2 — elevated on density or price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 8,
               "geo_key": "el Raval",
               "listings_impacted": 28,
               "entire_home_count": 86,
-              "breach_rate": 0.326
+              "breach_rate": 0.326,
+              "tier": "tier_2",
+              "recommended_action": "At 90-night cap, 28 listings recoverable here (Tier 2 — elevated on density or price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 9,
               "geo_key": "Sant Antoni",
               "listings_impacted": 26,
               "entire_home_count": 51,
-              "breach_rate": 0.51
+              "breach_rate": 0.51,
+              "tier": "tier_1",
+              "recommended_action": "At 90-night cap, 26 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 10,
               "geo_key": "el Poblenou",
               "listings_impacted": 21,
               "entire_home_count": 43,
-              "breach_rate": 0.488
+              "breach_rate": 0.488,
+              "tier": "tier_1",
+              "recommended_action": "At 90-night cap, 21 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             }
           ],
           "cap_60": [
@@ -947,70 +1115,90 @@
               "geo_key": "la Dreta de l'Eixample",
               "listings_impacted": 111,
               "entire_home_count": 201,
-              "breach_rate": 0.552
+              "breach_rate": 0.552,
+              "tier": "tier_1",
+              "recommended_action": "At 60-night cap, 111 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 2,
               "geo_key": "la Sagrada Família",
               "listings_impacted": 57,
               "entire_home_count": 106,
-              "breach_rate": 0.538
+              "breach_rate": 0.538,
+              "tier": "tier_1",
+              "recommended_action": "At 60-night cap, 57 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 3,
               "geo_key": "el Poble-sec",
               "listings_impacted": 49,
               "entire_home_count": 83,
-              "breach_rate": 0.59
+              "breach_rate": 0.59,
+              "tier": "tier_1",
+              "recommended_action": "At 60-night cap, 49 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 4,
               "geo_key": "l'Antiga Esquerra de l'Eixample",
               "listings_impacted": 46,
               "entire_home_count": 94,
-              "breach_rate": 0.489
+              "breach_rate": 0.489,
+              "tier": "tier_2",
+              "recommended_action": "At 60-night cap, 46 listings recoverable here (Tier 2 — elevated on density or price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 5,
               "geo_key": "la Vila de Gràcia",
               "listings_impacted": 39,
               "entire_home_count": 76,
-              "breach_rate": 0.513
+              "breach_rate": 0.513,
+              "tier": "tier_1",
+              "recommended_action": "At 60-night cap, 39 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 6,
               "geo_key": "Sant Pere, Santa Caterina i la Ribera",
               "listings_impacted": 35,
               "entire_home_count": 100,
-              "breach_rate": 0.35
+              "breach_rate": 0.35,
+              "tier": "tier_2",
+              "recommended_action": "At 60-night cap, 35 listings recoverable here (Tier 2 — elevated on density or price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 7,
               "geo_key": "la Nova Esquerra de l'Eixample",
               "listings_impacted": 34,
               "entire_home_count": 60,
-              "breach_rate": 0.567
+              "breach_rate": 0.567,
+              "tier": "tier_2",
+              "recommended_action": "At 60-night cap, 34 listings recoverable here (Tier 2 — elevated on density or price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 8,
               "geo_key": "el Raval",
               "listings_impacted": 32,
               "entire_home_count": 86,
-              "breach_rate": 0.372
+              "breach_rate": 0.372,
+              "tier": "tier_2",
+              "recommended_action": "At 60-night cap, 32 listings recoverable here (Tier 2 — elevated on density or price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 9,
               "geo_key": "Sant Antoni",
               "listings_impacted": 28,
               "entire_home_count": 51,
-              "breach_rate": 0.549
+              "breach_rate": 0.549,
+              "tier": "tier_1",
+              "recommended_action": "At 60-night cap, 28 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 10,
               "geo_key": "Gothic Quarter",
               "listings_impacted": 23,
               "entire_home_count": 71,
-              "breach_rate": 0.324
+              "breach_rate": 0.324,
+              "tier": "tier_2",
+              "recommended_action": "At 60-night cap, 23 listings recoverable here (Tier 2 — elevated on density or price.). Sequence enforcement against this list, starting from tier 1."
             }
           ],
           "cap_30": [
@@ -1019,70 +1207,90 @@
               "geo_key": "la Dreta de l'Eixample",
               "listings_impacted": 119,
               "entire_home_count": 201,
-              "breach_rate": 0.592
+              "breach_rate": 0.592,
+              "tier": "tier_1",
+              "recommended_action": "At 30-night cap, 119 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 2,
               "geo_key": "la Sagrada Família",
               "listings_impacted": 61,
               "entire_home_count": 106,
-              "breach_rate": 0.576
+              "breach_rate": 0.576,
+              "tier": "tier_1",
+              "recommended_action": "At 30-night cap, 61 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 3,
               "geo_key": "el Poble-sec",
               "listings_impacted": 54,
               "entire_home_count": 83,
-              "breach_rate": 0.651
+              "breach_rate": 0.651,
+              "tier": "tier_1",
+              "recommended_action": "At 30-night cap, 54 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 4,
               "geo_key": "l'Antiga Esquerra de l'Eixample",
               "listings_impacted": 51,
               "entire_home_count": 94,
-              "breach_rate": 0.543
+              "breach_rate": 0.543,
+              "tier": "tier_2",
+              "recommended_action": "At 30-night cap, 51 listings recoverable here (Tier 2 — elevated on density or price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 5,
               "geo_key": "la Vila de Gràcia",
               "listings_impacted": 43,
               "entire_home_count": 76,
-              "breach_rate": 0.566
+              "breach_rate": 0.566,
+              "tier": "tier_1",
+              "recommended_action": "At 30-night cap, 43 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 6,
               "geo_key": "Sant Pere, Santa Caterina i la Ribera",
               "listings_impacted": 40,
               "entire_home_count": 100,
-              "breach_rate": 0.4
+              "breach_rate": 0.4,
+              "tier": "tier_2",
+              "recommended_action": "At 30-night cap, 40 listings recoverable here (Tier 2 — elevated on density or price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 7,
               "geo_key": "la Nova Esquerra de l'Eixample",
               "listings_impacted": 36,
               "entire_home_count": 60,
-              "breach_rate": 0.6
+              "breach_rate": 0.6,
+              "tier": "tier_2",
+              "recommended_action": "At 30-night cap, 36 listings recoverable here (Tier 2 — elevated on density or price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 8,
               "geo_key": "el Raval",
               "listings_impacted": 35,
               "entire_home_count": 86,
-              "breach_rate": 0.407
+              "breach_rate": 0.407,
+              "tier": "tier_2",
+              "recommended_action": "At 30-night cap, 35 listings recoverable here (Tier 2 — elevated on density or price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 9,
               "geo_key": "Sant Antoni",
               "listings_impacted": 29,
               "entire_home_count": 51,
-              "breach_rate": 0.569
+              "breach_rate": 0.569,
+              "tier": "tier_1",
+              "recommended_action": "At 30-night cap, 29 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 10,
               "geo_key": "Gothic Quarter",
               "listings_impacted": 26,
               "entire_home_count": 71,
-              "breach_rate": 0.366
+              "breach_rate": 0.366,
+              "tier": "tier_2",
+              "recommended_action": "At 30-night cap, 26 listings recoverable here (Tier 2 — elevated on density or price.). Sequence enforcement against this list, starting from tier 1."
             }
           ]
         },
@@ -1093,70 +1301,90 @@
               "geo_key": "Whitechapel",
               "listings_impacted": 44,
               "entire_home_count": 148,
-              "breach_rate": 0.297
+              "breach_rate": 0.297,
+              "tier": "tier_2",
+              "recommended_action": "At 90-night cap, 44 listings recoverable here (Tier 2 — elevated on density or price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 2,
               "geo_key": "Paddington",
               "listings_impacted": 42,
               "entire_home_count": 128,
-              "breach_rate": 0.328
+              "breach_rate": 0.328,
+              "tier": "tier_1",
+              "recommended_action": "At 90-night cap, 42 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 3,
               "geo_key": "Westbourne Green",
               "listings_impacted": 41,
               "entire_home_count": 178,
-              "breach_rate": 0.23
+              "breach_rate": 0.23,
+              "tier": "tier_1",
+              "recommended_action": "At 90-night cap, 41 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 4,
               "geo_key": "Marylebone",
               "listings_impacted": 35,
               "entire_home_count": 153,
-              "breach_rate": 0.229
+              "breach_rate": 0.229,
+              "tier": "tier_1",
+              "recommended_action": "At 90-night cap, 35 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 5,
               "geo_key": "Chelsea",
               "listings_impacted": 26,
               "entire_home_count": 112,
-              "breach_rate": 0.232
+              "breach_rate": 0.232,
+              "tier": "tier_1",
+              "recommended_action": "At 90-night cap, 26 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 6,
               "geo_key": "North Kensington",
               "listings_impacted": 26,
               "entire_home_count": 82,
-              "breach_rate": 0.317
+              "breach_rate": 0.317,
+              "tier": "tier_1",
+              "recommended_action": "At 90-night cap, 26 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 7,
               "geo_key": "Barnsbury",
               "listings_impacted": 24,
               "entire_home_count": 77,
-              "breach_rate": 0.312
+              "breach_rate": 0.312,
+              "tier": "tier_2",
+              "recommended_action": "At 90-night cap, 24 listings recoverable here (Tier 2 — elevated on density or price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 8,
               "geo_key": "West Kensington",
               "listings_impacted": 24,
               "entire_home_count": 90,
-              "breach_rate": 0.267
+              "breach_rate": 0.267,
+              "tier": "tier_2",
+              "recommended_action": "At 90-night cap, 24 listings recoverable here (Tier 2 — elevated on density or price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 9,
               "geo_key": "Earl's Court",
               "listings_impacted": 23,
               "entire_home_count": 145,
-              "breach_rate": 0.159
+              "breach_rate": 0.159,
+              "tier": "tier_1",
+              "recommended_action": "At 90-night cap, 23 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 10,
               "geo_key": "Shoreditch",
               "listings_impacted": 23,
               "entire_home_count": 54,
-              "breach_rate": 0.426
+              "breach_rate": 0.426,
+              "tier": "tier_1",
+              "recommended_action": "At 90-night cap, 23 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             }
           ],
           "cap_60": [
@@ -1165,70 +1393,90 @@
               "geo_key": "Paddington",
               "listings_impacted": 51,
               "entire_home_count": 128,
-              "breach_rate": 0.398
+              "breach_rate": 0.398,
+              "tier": "tier_1",
+              "recommended_action": "At 60-night cap, 51 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 2,
               "geo_key": "Westbourne Green",
               "listings_impacted": 48,
               "entire_home_count": 178,
-              "breach_rate": 0.27
+              "breach_rate": 0.27,
+              "tier": "tier_1",
+              "recommended_action": "At 60-night cap, 48 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 3,
               "geo_key": "Whitechapel",
               "listings_impacted": 48,
               "entire_home_count": 148,
-              "breach_rate": 0.324
+              "breach_rate": 0.324,
+              "tier": "tier_2",
+              "recommended_action": "At 60-night cap, 48 listings recoverable here (Tier 2 — elevated on density or price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 4,
               "geo_key": "Marylebone",
               "listings_impacted": 38,
               "entire_home_count": 153,
-              "breach_rate": 0.248
+              "breach_rate": 0.248,
+              "tier": "tier_1",
+              "recommended_action": "At 60-night cap, 38 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 5,
               "geo_key": "Earl's Court",
               "listings_impacted": 35,
               "entire_home_count": 145,
-              "breach_rate": 0.241
+              "breach_rate": 0.241,
+              "tier": "tier_1",
+              "recommended_action": "At 60-night cap, 35 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 6,
               "geo_key": "Chelsea",
               "listings_impacted": 33,
               "entire_home_count": 112,
-              "breach_rate": 0.295
+              "breach_rate": 0.295,
+              "tier": "tier_1",
+              "recommended_action": "At 60-night cap, 33 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 7,
               "geo_key": "Fulham",
               "listings_impacted": 33,
               "entire_home_count": 113,
-              "breach_rate": 0.292
+              "breach_rate": 0.292,
+              "tier": "tier_1",
+              "recommended_action": "At 60-night cap, 33 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 8,
               "geo_key": "Notting Hill",
               "listings_impacted": 32,
               "entire_home_count": 106,
-              "breach_rate": 0.302
+              "breach_rate": 0.302,
+              "tier": "tier_1",
+              "recommended_action": "At 60-night cap, 32 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 9,
               "geo_key": "West Kensington",
               "listings_impacted": 30,
               "entire_home_count": 90,
-              "breach_rate": 0.333
+              "breach_rate": 0.333,
+              "tier": "tier_2",
+              "recommended_action": "At 60-night cap, 30 listings recoverable here (Tier 2 — elevated on density or price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 10,
               "geo_key": "Brompton",
               "listings_impacted": 28,
               "entire_home_count": 95,
-              "breach_rate": 0.295
+              "breach_rate": 0.295,
+              "tier": "tier_1",
+              "recommended_action": "At 60-night cap, 28 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             }
           ],
           "cap_30": [
@@ -1237,70 +1485,90 @@
               "geo_key": "Paddington",
               "listings_impacted": 58,
               "entire_home_count": 128,
-              "breach_rate": 0.453
+              "breach_rate": 0.453,
+              "tier": "tier_1",
+              "recommended_action": "At 30-night cap, 58 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 2,
               "geo_key": "Whitechapel",
               "listings_impacted": 57,
               "entire_home_count": 148,
-              "breach_rate": 0.385
+              "breach_rate": 0.385,
+              "tier": "tier_2",
+              "recommended_action": "At 30-night cap, 57 listings recoverable here (Tier 2 — elevated on density or price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 3,
               "geo_key": "Westbourne Green",
               "listings_impacted": 51,
               "entire_home_count": 178,
-              "breach_rate": 0.286
+              "breach_rate": 0.286,
+              "tier": "tier_1",
+              "recommended_action": "At 30-night cap, 51 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 4,
               "geo_key": "Marylebone",
               "listings_impacted": 48,
               "entire_home_count": 153,
-              "breach_rate": 0.314
+              "breach_rate": 0.314,
+              "tier": "tier_1",
+              "recommended_action": "At 30-night cap, 48 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 5,
               "geo_key": "Earl's Court",
               "listings_impacted": 43,
               "entire_home_count": 145,
-              "breach_rate": 0.297
+              "breach_rate": 0.297,
+              "tier": "tier_1",
+              "recommended_action": "At 30-night cap, 43 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 6,
               "geo_key": "Fulham",
               "listings_impacted": 43,
               "entire_home_count": 113,
-              "breach_rate": 0.381
+              "breach_rate": 0.381,
+              "tier": "tier_1",
+              "recommended_action": "At 30-night cap, 43 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 7,
               "geo_key": "Chelsea",
               "listings_impacted": 42,
               "entire_home_count": 112,
-              "breach_rate": 0.375
+              "breach_rate": 0.375,
+              "tier": "tier_1",
+              "recommended_action": "At 30-night cap, 42 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 8,
               "geo_key": "Notting Hill",
               "listings_impacted": 36,
               "entire_home_count": 106,
-              "breach_rate": 0.34
+              "breach_rate": 0.34,
+              "tier": "tier_1",
+              "recommended_action": "At 30-night cap, 36 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 9,
               "geo_key": "Brompton",
               "listings_impacted": 35,
               "entire_home_count": 95,
-              "breach_rate": 0.368
+              "breach_rate": 0.368,
+              "tier": "tier_1",
+              "recommended_action": "At 30-night cap, 35 listings recoverable here (Tier 1 — high concentration AND high price.). Sequence enforcement against this list, starting from tier 1."
             },
             {
               "rank": 10,
               "geo_key": "West Kensington",
               "listings_impacted": 34,
               "entire_home_count": 90,
-              "breach_rate": 0.378
+              "breach_rate": 0.378,
+              "tier": "tier_2",
+              "recommended_action": "At 30-night cap, 34 listings recoverable here (Tier 2 — elevated on density or price.). Sequence enforcement against this list, starting from tier 1."
             }
           ]
         }
@@ -1311,70 +1579,80 @@
           "geo_key": "la Dreta de l'Eixample",
           "reside_unregistered_count": 59,
           "entire_home_count": 201,
-          "reside_share": 0.293
+          "reside_share": 0.293,
+          "recommended_action": "59 entire-home listings without registration on record. Priority RESIDE compliance target — issue compliance notices and confirm phase-out timeline alignment."
         },
         {
           "rank": 2,
           "geo_key": "Sant Pere, Santa Caterina i la Ribera",
           "reside_unregistered_count": 39,
           "entire_home_count": 100,
-          "reside_share": 0.39
+          "reside_share": 0.39,
+          "recommended_action": "39 entire-home listings without registration on record. Priority RESIDE compliance target — issue compliance notices and confirm phase-out timeline alignment."
         },
         {
           "rank": 3,
           "geo_key": "Gothic Quarter",
           "reside_unregistered_count": 31,
           "entire_home_count": 71,
-          "reside_share": 0.437
+          "reside_share": 0.437,
+          "recommended_action": "31 entire-home listings without registration on record. Priority RESIDE compliance target — issue compliance notices and confirm phase-out timeline alignment."
         },
         {
           "rank": 4,
           "geo_key": "el Raval",
           "reside_unregistered_count": 31,
           "entire_home_count": 86,
-          "reside_share": 0.36
+          "reside_share": 0.36,
+          "recommended_action": "31 entire-home listings without registration on record. Priority RESIDE compliance target — issue compliance notices and confirm phase-out timeline alignment."
         },
         {
           "rank": 5,
           "geo_key": "la Sagrada Família",
           "reside_unregistered_count": 30,
           "entire_home_count": 106,
-          "reside_share": 0.283
+          "reside_share": 0.283,
+          "recommended_action": "30 entire-home listings without registration on record. Priority RESIDE compliance target — issue compliance notices and confirm phase-out timeline alignment."
         },
         {
           "rank": 6,
           "geo_key": "la Vila de Gràcia",
           "reside_unregistered_count": 20,
           "entire_home_count": 76,
-          "reside_share": 0.263
+          "reside_share": 0.263,
+          "recommended_action": "20 entire-home listings without registration on record. Priority RESIDE compliance target — issue compliance notices and confirm phase-out timeline alignment."
         },
         {
           "rank": 7,
           "geo_key": "la Barceloneta",
           "reside_unregistered_count": 19,
           "entire_home_count": 50,
-          "reside_share": 0.38
+          "reside_share": 0.38,
+          "recommended_action": "19 entire-home listings without registration on record. Priority RESIDE compliance target — issue compliance notices and confirm phase-out timeline alignment."
         },
         {
           "rank": 8,
           "geo_key": "la Nova Esquerra de l'Eixample",
           "reside_unregistered_count": 19,
           "entire_home_count": 60,
-          "reside_share": 0.317
+          "reside_share": 0.317,
+          "recommended_action": "19 entire-home listings without registration on record. Priority RESIDE compliance target — issue compliance notices and confirm phase-out timeline alignment."
         },
         {
           "rank": 9,
           "geo_key": "el Poble-sec",
           "reside_unregistered_count": 18,
           "entire_home_count": 83,
-          "reside_share": 0.217
+          "reside_share": 0.217,
+          "recommended_action": "18 entire-home listings without registration on record. Priority RESIDE compliance target — issue compliance notices and confirm phase-out timeline alignment."
         },
         {
           "rank": 10,
           "geo_key": "l'Antiga Esquerra de l'Eixample",
           "reside_unregistered_count": 17,
           "entire_home_count": 94,
-          "reside_share": 0.181
+          "reside_share": 0.181,
+          "recommended_action": "17 entire-home listings without registration on record. Priority RESIDE compliance target — issue compliance notices and confirm phase-out timeline alignment."
         }
       ]
     }

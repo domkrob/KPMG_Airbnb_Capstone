@@ -114,7 +114,7 @@ NEIGHBOURHOOD_KPIS = [
     ("median_nightly_price", "Phase B", "Median TTM nightly rate.", "currency", "Q4 metric."),
     ("p25_price", "Phase B", "25th percentile nightly rate.", "currency", ""),
     ("p75_price", "Phase B", "75th percentile nightly rate.", "currency", ""),
-    ("avg_occupancy", "Phase B", "Mean l90d_occupancy across listings.", "ratio 0–1", ""),
+    ("avg_occupancy", "Phase B", "Mean l90d_occupancy across listings in the neighbourhood.", "ratio 0–1", "Defaults to 0.0 (not NaN) when AirDNA has no occupancy data for any listing. Only affects tiny peripheral subdivisions; pair with tier_sample_adequate when reading."),
     ("total_revenue", "Phase B", "Sum of ttm_revenue across listings.", "currency", ""),
     ("breach_count_90", "Phase B", "Entire homes with ttm_days_booked > 90.", "count", "Q7 — listings impacted at a 90-night cap."),
     ("breach_count_60", "Phase B", "Entire homes with ttm_days_booked > 60.", "count", "Q7 stretch scenario."),
@@ -125,6 +125,8 @@ NEIGHBOURHOOD_KPIS = [
     ("reside_unregistered_count", "Phase B", "Entire homes without a registration on record.", "count", "Q7 RESIDE simulation (BCN-meaningful)."),
     ("reside_unregistered_share", "Phase B", "reside_unregistered_count / entire_home_count.", "ratio 0–1", "BCN-meaningful only."),
     ("professional_management_share", "Phase B", "Share of professionally-managed listings, computed only over reported cases.", "ratio 0–1", "Avoids null-imputation bias."),
+    ("tier_concentration_price", "Phase B (mentor update)", "Risk tier combining concentration and price: tier_1 (top quartile in both str_density AND median_nightly_price), tier_2 (top quartile in one), tier_3 (neither). Thresholds computed per city.", "tier_1|tier_2|tier_3", "Drives the 'policy advisor' framing. Reads in pair with tier_sample_adequate."),
+    ("tier_sample_adequate", "Phase B (mentor update)", "True if str_density >= 5 — i.e., enough listings for the tier label to be meaningful.", "True/False", "Chatbot should caveat tier conclusions for any row where this is False."),
 ]
 
 LONDON_BOROUGH_KPIS = [
@@ -243,10 +245,20 @@ def validate_knowledge_layer(
     cities = sorted(kpis["city"].unique())
     add("both cities present", set(cities) == {"barcelona", "london"}, f"cities={cities}")
 
-    # 2. Critical columns no nulls
-    critical = ["str_density", "entire_home_count", "breach_count_90", "breach_count_60", "breach_count_30"]
-    null_cols = [c for c in critical if kpis[c].isna().any()]
-    add("no nulls in critical count columns", not null_cols, f"nulls in: {null_cols}")
+    # 2. Critical columns no nulls.
+    # Counts are always defined; the str_density denominator is always positive
+    # in the KPI table (otherwise the row would not exist), so every share
+    # computed against it must also be non-null. avg_occupancy is filled to 0
+    # in compute_neighbourhood_kpis so it must never be null here.
+    critical = [
+        "str_density", "entire_home_count",
+        "breach_count_90", "breach_count_60", "breach_count_30",
+        "entire_home_share", "commercial_host_share",
+        "multi_listing_host_share", "active_share",
+        "avg_occupancy",
+    ]
+    null_cols = [c for c in critical if c in kpis.columns and kpis[c].isna().any()]
+    add("no nulls in critical columns", not null_cols, f"nulls in: {null_cols}")
 
     # 3. Schema parity across cities
     bcn_cols = set(kpis[kpis["city"] == "barcelona"].dropna(axis=1, how="all").columns)

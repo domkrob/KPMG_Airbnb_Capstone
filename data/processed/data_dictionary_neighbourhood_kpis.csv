@@ -13,7 +13,7 @@ multi_listing_host_share,float,multi_listing_host_count / str_density.,ratio 0�
 median_nightly_price,float,Median TTM average daily rate in EUR/GBP.,currency
 p25_price,float,25th percentile of TTM nightly rate.,currency
 p75_price,float,75th percentile of TTM nightly rate.,currency
-avg_occupancy,float,Mean l90d_occupancy across listings.,ratio 0–1
+avg_occupancy,float,Mean l90d_occupancy across listings in the neighbourhood. Defaults to 0.0 when AirDNA reports no occupancy data for any listing (only happens in tiny peripheral subdivisions; cross-check tier_sample_adequate before drawing conclusions).,ratio 0–1
 total_revenue,float,Sum of TTM revenue across all listings (local currency).,currency
 breach_count_90,int,Entire-home listings with ttm_days_booked > 90 — listings impacted at a 90-night cap.,count
 breach_count_60,int,Entire-home listings with ttm_days_booked > 60.,count
@@ -24,3 +24,5 @@ breach_rate_30,float,breach_count_30 / entire_home_count.,ratio 0–1
 reside_unregistered_count,int,"Entire homes without a registration on record. Regulatory signal for Barcelona (RESIDE) — for London it's context only, not a breach.",count
 reside_unregistered_share,float,reside_unregistered_count / entire_home_count.,ratio 0–1
 professional_management_share,float,"Share of professionally-managed listings, computed only over listings where the field was reported (avoids null-imputation bias).",ratio 0–1
+tier_concentration_price,string,Policy-advisor risk tier (mentor update). tier_1 = top-quartile str_density AND median_nightly_price (per city); tier_2 = top-quartile in one; tier_3 = neither.,tier_1|tier_2|tier_3
+tier_sample_adequate,bool,"True if str_density >= 5; below that, the tier label is set to tier_3 but should be presented with a caveat.",True/False

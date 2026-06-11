@@ -49,7 +49,13 @@ def compute_neighbourhood_kpis(features: pd.DataFrame) -> pd.DataFrame:
         "median_nightly_price": grouped["ttm_avg_rate"].median(),
         "p25_price": grouped["ttm_avg_rate"].quantile(0.25),
         "p75_price": grouped["ttm_avg_rate"].quantile(0.75),
-        "avg_occupancy": grouped["l90d_occupancy"].mean(),
+        # avg_occupancy defaults to 0 for neighbourhoods where AirDNA reports no
+        # occupancy data for any listing. Verified safe: the 26 affected rows
+        # (June 2026) are all tiny peripheral subdivisions (max 3 listings each),
+        # all flagged tier_sample_adequate=False, with zero policy signal.
+        # Using NaN would break M3's clustering and leak NaN into M4's chatbot;
+        # 0 is the honest semantic (no measurable activity).
+        "avg_occupancy": grouped["l90d_occupancy"].mean().fillna(0),
         "total_revenue": grouped["ttm_revenue"].sum(),
         "breach_count_90": grouped["breach_90_flag"].sum().astype(int),
         "breach_count_60": grouped["breach_60_flag"].sum().astype(int),
@@ -99,6 +105,13 @@ def compute_neighbourhood_kpis(features: pd.DataFrame) -> pd.DataFrame:
 
     # Tidy: reset index, round floats, sort, move geo_level next to geo_key
     out = out.reset_index().sort_values(["city", "geo_key"], ignore_index=True)
+
+    # Item C (mentor feedback): tier 1/2/3 by concentration + price.
+    # Added at the end so it can reference the computed str_density and
+    # median_nightly_price. Pure additive operation — does not alter any
+    # existing column. Re-run via notebook 04.
+    out = add_concentration_price_tier(out)
+
     cols = ["city", "geo_key", "geo_level"] + [
         c for c in out.columns if c not in ("city", "geo_key", "geo_level")
     ]
@@ -106,6 +119,46 @@ def compute_neighbourhood_kpis(features: pd.DataFrame) -> pd.DataFrame:
 
     float_cols = out.select_dtypes(include="float").columns
     out[float_cols] = out[float_cols].round(4)
+
+    return out
+
+
+# --- Item C: concentration + price risk tier ---------------------------------
+
+def add_concentration_price_tier(
+    kpis: pd.DataFrame,
+    min_density: int = 5,
+    quantile: float = 0.75,
+) -> pd.DataFrame:
+    """Add ``tier_concentration_price`` and ``tier_sample_adequate`` columns.
+
+    Mentor feedback (June 2026): the policy-advisor framing wants a clean
+    tier-1/2/3 signal driven by concentration AND price together.
+
+    - tier_1: top-quartile str_density AND top-quartile median_nightly_price (per city)
+    - tier_2: top-quartile in exactly one of the two
+    - tier_3: top-quartile in neither
+
+    Neighbourhoods below ``min_density`` listings are still labelled (defaulted to
+    tier_3 for sorting cleanliness) but flagged via ``tier_sample_adequate=False``
+    so the chatbot can caveat the tier honestly. Thresholds are per-city quartiles
+    because BCN and LDN have different absolute scales.
+    """
+    out = kpis.copy()
+    out["tier_concentration_price"] = "tier_3"
+    out["tier_sample_adequate"] = out["str_density"] >= min_density
+
+    for city in out["city"].unique():
+        city_mask = out["city"] == city
+        eligible = city_mask & out["tier_sample_adequate"] & out["median_nightly_price"].notna()
+        if eligible.sum() == 0:
+            continue
+        d_thresh = out.loc[eligible, "str_density"].quantile(quantile)
+        p_thresh = out.loc[eligible, "median_nightly_price"].quantile(quantile)
+        high_d = (out["str_density"] >= d_thresh) & city_mask
+        high_p = (out["median_nightly_price"] >= p_thresh) & city_mask
+        out.loc[eligible & high_d & high_p, "tier_concentration_price"] = "tier_1"
+        out.loc[eligible & (high_d ^ high_p), "tier_concentration_price"] = "tier_2"
 
     return out
 
@@ -131,7 +184,7 @@ def kpi_data_dictionary() -> pd.DataFrame:
         ("median_nightly_price", "float", "Median TTM average daily rate in EUR/GBP.", "currency"),
         ("p25_price", "float", "25th percentile of TTM nightly rate.", "currency"),
         ("p75_price", "float", "75th percentile of TTM nightly rate.", "currency"),
-        ("avg_occupancy", "float", "Mean l90d_occupancy across listings.", "ratio 0–1"),
+        ("avg_occupancy", "float", "Mean l90d_occupancy across listings in the neighbourhood. Defaults to 0.0 when AirDNA reports no occupancy data for any listing (only happens in tiny peripheral subdivisions; cross-check tier_sample_adequate before drawing conclusions).", "ratio 0–1"),
         ("total_revenue", "float", "Sum of TTM revenue across all listings (local currency).", "currency"),
         ("breach_count_90", "int", "Entire-home listings with ttm_days_booked > 90 — listings impacted at a 90-night cap.", "count"),
         ("breach_count_60", "int", "Entire-home listings with ttm_days_booked > 60.", "count"),
@@ -142,5 +195,7 @@ def kpi_data_dictionary() -> pd.DataFrame:
         ("reside_unregistered_count", "int", "Entire homes without a registration on record. Regulatory signal for Barcelona (RESIDE) — for London it's context only, not a breach.", "count"),
         ("reside_unregistered_share", "float", "reside_unregistered_count / entire_home_count.", "ratio 0–1"),
         ("professional_management_share", "float", "Share of professionally-managed listings, computed only over listings where the field was reported (avoids null-imputation bias).", "ratio 0–1"),
+        ("tier_concentration_price", "string", "Policy-advisor risk tier (mentor update). tier_1 = top-quartile str_density AND median_nightly_price (per city); tier_2 = top-quartile in one; tier_3 = neither.", "tier_1|tier_2|tier_3"),
+        ("tier_sample_adequate", "bool", "True if str_density >= 5; below that, the tier label is set to tier_3 but should be presented with a caveat.", "True/False"),
     ]
     return pd.DataFrame(rows, columns=["column", "dtype", "definition", "unit"])

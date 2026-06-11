@@ -1,6 +1,6 @@
 check,status,detail
 both cities present,PASS,"cities=['barcelona', 'london']"
-no nulls in critical count columns,PASS,nulls in: []
+no nulls in critical columns,PASS,nulls in: []
 schema parity (BCN vs LDN),PASS,diff: set()
 density reconciles (barcelona),PASS,"features=2354, kpis_sum=2354"
 density reconciles (london),PASS,"features=9599, kpis_sum=9599"

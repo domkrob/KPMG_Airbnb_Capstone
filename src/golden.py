@@ -16,19 +16,62 @@ import pandas as pd
 MIN_DENSITY_FOR_SHARES = 30
 
 
+# --- Item D: policy-advisor recommendations ---------------------------------
+# Mentor feedback (June 2026): reframe answers as a "policy advisor" rather than
+# pure descriptive Q&A. Each canonical question now carries:
+#   - a ``policy_guidance`` field at the question level (one-liner the chatbot can
+#     surface as the framing for the answer)
+#   - a ``recommended_action`` field on each result row (per-neighbourhood
+#     prescription the chatbot can lift into its response)
+# These are additive. Existing fields are unchanged so the M4 evaluation harness
+# does not break.
+
+def _tier_for(kpis: pd.DataFrame, city: str, geo_key: str) -> str:
+    """Look up tier_concentration_price for a (city, geo_key). Returns 'tier_3'
+    if column or row missing (safe default — chatbot will simply not escalate)."""
+    if "tier_concentration_price" not in kpis.columns:
+        return "tier_3"
+    row = kpis[(kpis["city"] == city) & (kpis["geo_key"] == geo_key)]
+    if row.empty:
+        return "tier_3"
+    return str(row["tier_concentration_price"].iloc[0])
+
+
+def _tier_phrase(tier: str) -> str:
+    return {
+        "tier_1": "Tier 1 — high concentration AND high price.",
+        "tier_2": "Tier 2 — elevated on density or price.",
+        "tier_3": "Tier 3 — lower combined risk.",
+    }.get(tier, "Tier unclassified.")
+
+
 # --- Q1 -----------------------------------------------------------------------
 
 def q1_top_density(kpis: pd.DataFrame, top_n: int = 10) -> dict:
     """Q1 — Which neighbourhoods have the highest concentration of STRs?"""
     out = {"question": q1_top_density.__doc__.strip(),
            "method": f"Top {top_n} subdivisions per city by str_density.",
+           "policy_guidance": ("These neighbourhoods host the largest STR footprints. "
+                               "Allocate enforcement capacity here first — inspection "
+                               "yield scales with concentration."),
            "answers": {}}
     for city in ("barcelona", "london"):
         df = kpis[kpis["city"] == city].nlargest(top_n, "str_density")
-        out["answers"][city] = [
-            {"rank": i + 1, "geo_key": r["geo_key"], "str_density": int(r["str_density"])}
-            for i, r in enumerate(df.to_dict("records"))
-        ]
+        rows = []
+        for i, r in enumerate(df.to_dict("records")):
+            tier = _tier_for(kpis, city, r["geo_key"])
+            rows.append({
+                "rank": i + 1,
+                "geo_key": r["geo_key"],
+                "str_density": int(r["str_density"]),
+                "tier": tier,
+                "recommended_action": (
+                    f"Priority inspection target ({_tier_phrase(tier)}). "
+                    f"{int(r['str_density'])} listings concentrated here — "
+                    "size enforcement capacity to match."
+                ),
+            })
+        out["answers"][city] = rows
     return out
 
 
@@ -43,22 +86,31 @@ def q2_top_entire_home_share(
     out = {"question": q2_top_entire_home_share.__doc__.strip(),
            "method": (f"Top {top_n} subdivisions per city by entire_home_share, "
                       f"restricted to neighbourhoods with str_density >= {min_density}."),
+           "policy_guidance": ("Entire-home share is the strongest displacement signal. "
+                               "These neighbourhoods are the clearest candidates for "
+                               "change-of-use planning restrictions to recover housing stock."),
            "answers": {}}
     for city in ("barcelona", "london"):
         df = (
             kpis[(kpis["city"] == city) & (kpis["str_density"] >= min_density)]
             .nlargest(top_n, "entire_home_share")
         )
-        out["answers"][city] = [
-            {
+        rows = []
+        for i, r in enumerate(df.to_dict("records")):
+            share_pct = round(float(r["entire_home_share"]) * 100, 1)
+            rows.append({
                 "rank": i + 1,
                 "geo_key": r["geo_key"],
                 "str_density": int(r["str_density"]),
                 "entire_home_count": int(r["entire_home_count"]),
                 "entire_home_share": round(float(r["entire_home_share"]), 3),
-            }
-            for i, r in enumerate(df.to_dict("records"))
-        ]
+                "recommended_action": (
+                    f"{share_pct}% of listings are entire homes — strong candidate for "
+                    "change-of-use planning restriction. Recoverable housing units: "
+                    f"up to {int(r['entire_home_count'])}."
+                ),
+            })
+        out["answers"][city] = rows
     return out
 
 
@@ -74,22 +126,31 @@ def q3_top_commercial_host_share(
            "method": (f"Top {top_n} subdivisions per city by commercial_host_share "
                       f"(commercial+super_commercial tiers, ≥5 listings/host), "
                       f"restricted to str_density >= {min_density}."),
+           "policy_guidance": ("Concentration of commercial hosts (≥5 listings each) "
+                               "signals professional letting operations rather than "
+                               "casual home-sharing. Compliance audits here have the "
+                               "highest yield per inspector-hour."),
            "answers": {}}
     for city in ("barcelona", "london"):
         df = (
             kpis[(kpis["city"] == city) & (kpis["str_density"] >= min_density)]
             .nlargest(top_n, "commercial_host_share")
         )
-        out["answers"][city] = [
-            {
+        rows = []
+        for i, r in enumerate(df.to_dict("records")):
+            comm_pct = round(float(r["commercial_host_share"]) * 100, 1)
+            rows.append({
                 "rank": i + 1,
                 "geo_key": r["geo_key"],
                 "str_density": int(r["str_density"]),
                 "commercial_host_share": round(float(r["commercial_host_share"]), 3),
                 "multi_listing_host_share": round(float(r["multi_listing_host_share"]), 3),
-            }
-            for i, r in enumerate(df.to_dict("records"))
-        ]
+                "recommended_action": (
+                    f"{comm_pct}% of listings owned by commercial-scale hosts. "
+                    "Focus commercial-letting compliance audits and licensing checks here."
+                ),
+            })
+        out["answers"][city] = rows
     return out
 
 
@@ -103,7 +164,12 @@ def q4_density_price_intersection(
     """Q4 — In which neighbourhoods does high STR density coincide with high prices?"""
     out = {"question": q4_density_price_intersection.__doc__.strip(),
            "method": (f"Subdivisions in top quartile of BOTH str_density AND median_nightly_price "
-                      f"per city (str_density >= {min_density})."),
+                      f"per city (str_density >= {min_density}). These are the tier-1 areas — "
+                      "see tier_concentration_price column for the full classification."),
+           "policy_guidance": ("Tier-1 neighbourhoods carry both volume and revenue intensity. "
+                               "Enforcement here delivers the largest market signal — high visibility "
+                               "to the industry, high recovery of housing units, and strong public-"
+                               "interest defensibility."),
            "answers": {},
            "correlations": {}}
     for city in ("barcelona", "london"):
@@ -124,6 +190,12 @@ def q4_density_price_intersection(
                 "geo_key": r["geo_key"],
                 "str_density": int(r["str_density"]),
                 "median_nightly_price": round(float(r["median_nightly_price"]), 1),
+                "tier": "tier_1",
+                "recommended_action": (
+                    f"Tier 1 priority. {int(r['str_density'])} listings at "
+                    f"€/£{round(float(r['median_nightly_price']), 0):.0f} median nightly — "
+                    "lead with this area in any phased enforcement rollout."
+                ),
             }
             for r in intersect.to_dict("records")
         ]
@@ -150,6 +222,9 @@ def q5_saturated_vs_emerging(
                       "commercial-host share + occupancy. "
                       "Emerging = top active-listing growth (recent 6 mo vs prior 6 mo). "
                       "Member 3 will replace the saturated heuristic with the proper KMeans cluster label."),
+           "policy_guidance": ("Saturated areas need SUSTAINED presence to prevent backslide. "
+                               "Emerging areas benefit from PRE-EMPTIVE action — intervention is "
+                               "cheaper and more politically tractable before saturation sets in."),
            "answers": {"saturated": {}, "emerging": {}}}
 
     # Saturated — composite heuristic
@@ -174,6 +249,10 @@ def q5_saturated_vs_emerging(
                 "commercial_host_share": round(float(r["commercial_host_share"]), 3),
                 "avg_occupancy": round(float(r["avg_occupancy"]), 3),
                 "saturation_score": round(float(r["_saturation_score"]), 2),
+                "recommended_action": (
+                    "Saturated — maintain visible enforcement; monitor for displacement to "
+                    "adjacent neighbourhoods; resist political pressure to relax existing rules."
+                ),
             }
             for i, r in enumerate(top.to_dict("records"))
         ]
@@ -190,6 +269,11 @@ def q5_saturated_vs_emerging(
                 "prior_active": round(float(r["prior_active"]), 1),
                 "recent_active": round(float(r["recent_active"]), 1),
                 "active_growth_pct": round(float(r["active_growth_pct"]), 1),
+                "recommended_action": (
+                    f"Emerging hotspot (+{round(float(r['active_growth_pct']), 0):.0f}% active "
+                    "listings in 6 months). Pre-emptive monitoring; consider "
+                    "early intervention before saturation triggers stronger displacement."
+                ),
             }
             for i, r in enumerate(sub.to_dict("records"))
         ]
@@ -202,6 +286,10 @@ def q6_city_comparison(kpis: pd.DataFrame, features: pd.DataFrame) -> dict:
     """Q6 — How does STR pressure compare between Barcelona and London?"""
     out = {"question": q6_city_comparison.__doc__.strip(),
            "method": ("Side-by-side comparison of citywide totals and neighbourhood-level medians."),
+           "policy_guidance": ("Barcelona's RESIDE phase-out is the stronger regulatory instrument "
+                               "and is reflected in lower commercialisation per neighbourhood. London's "
+                               "90-night cap is comparatively permissive — use this contrast when "
+                               "sizing the political ambition of any proposed change."),
            "answers": {}}
 
     citywide = {}
@@ -249,6 +337,10 @@ def q7_policy_simulation(kpis: pd.DataFrame, caps: tuple = (90, 60, 30)) -> dict
                       "neighbourhoods per cap per city. RESIDE simulation: count of "
                       "reside_unregistered listings per Barcelona neighbourhood (entire homes "
                       "without registration on record)."),
+           "policy_guidance": ("Q7 is the flagship policy decision. The cap-level choice should be "
+                               "sized to enforcement capacity, not theoretical recovery — under-resourced "
+                               "enforcement erodes regulatory credibility. Sequence rollout starting with "
+                               "tier-1 neighbourhoods to maximise early signal."),
            "answers": {}}
 
     # City totals per cap. NOTE: sums over neighbourhoods exclude listings with
@@ -280,7 +372,13 @@ def q7_policy_simulation(kpis: pd.DataFrame, caps: tuple = (90, 60, 30)) -> dict
                  "listings_impacted": int(r[col]),
                  "entire_home_count": int(r["entire_home_count"]),
                  "breach_rate": round(float(r[f"breach_rate_{cap}"]), 3)
-                 if pd.notna(r[f"breach_rate_{cap}"]) else None}
+                 if pd.notna(r[f"breach_rate_{cap}"]) else None,
+                 "tier": _tier_for(kpis, city, r["geo_key"]),
+                 "recommended_action": (
+                     f"At {cap}-night cap, {int(r[col])} listings recoverable here "
+                     f"({_tier_phrase(_tier_for(kpis, city, r['geo_key']))}). "
+                     "Sequence enforcement against this list, starting from tier 1."
+                 )}
                 for i, r in enumerate(df.to_dict("records"))
             ]
     out["answers"]["top_impacted_neighbourhoods"] = top_impacted
@@ -293,7 +391,12 @@ def q7_policy_simulation(kpis: pd.DataFrame, caps: tuple = (90, 60, 30)) -> dict
          "reside_unregistered_count": int(r["reside_unregistered_count"]),
          "entire_home_count": int(r["entire_home_count"]),
          "reside_share": round(float(r["reside_unregistered_share"]), 3)
-         if pd.notna(r["reside_unregistered_share"]) else None}
+         if pd.notna(r["reside_unregistered_share"]) else None,
+         "recommended_action": (
+             f"{int(r['reside_unregistered_count'])} entire-home listings without "
+             "registration on record. Priority RESIDE compliance target — issue "
+             "compliance notices and confirm phase-out timeline alignment."
+         )}
         for i, r in enumerate(bcn.to_dict("records"))
     ]
     return out
