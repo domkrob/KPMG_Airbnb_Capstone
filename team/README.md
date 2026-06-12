@@ -6,7 +6,7 @@ Sequential split of the remaining capstone work, mapped to both the KPMG slide f
 |---|---|---|---|---|---|
 | 1 | Member 1 | Data Preparation | Phase 2 (base) | Data Optimization | ✅ Complete |
 | 2 | Mohammed | Feature Engineering & EDA | Phase 2 (advanced) + Phase 3 (EDA) + Phase 4 (draft) | Exploratory Analysis | 🟡 In progress |
-| 3 | Member 3 | Segmentation, Modelling, Policy Sim | Phase 3 (ML) + Phase 4 (final) | Segmentation + Price Prediction + Evaluation Metrics | ⏳ Pending |
+| 3 | Member 3 | Segmentation, Modelling, Policy Sim | Phase 3 (ML) + Phase 4 (final) | Segmentation + Price Prediction + Evaluation Metrics | ✅ Complete |
 | 4 | Member 4 | Chatbot, Evaluation, Responsible AI | Phase 5 + 6 + 7 + 8 | Generate AI Chatbot | ⏳ Pending |
 
 Each member's full scope, deliverables, and acceptance criteria are in their numbered markdown file.

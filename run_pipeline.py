@@ -1,6 +1,6 @@
 """Run the full Urban Rental Intelligence Copilot pipeline end-to-end.
 
-Executes notebooks 01 → 07 in order in the active env via nbconvert,
+Executes notebooks 01 → 11 in order in the active env via nbconvert,
 re-saving each in place. Stops on first failure.
 
 Usage (from the repo root, with kpmg-airbnb-capstone env active):
@@ -29,6 +29,13 @@ PIPELINE = [
     "05_eda_barcelona_london.ipynb",
     "06_knowledge_layer_lock.ipynb",
     "07_golden_answers.ipynb",
+    # Member 3 — segmentation, price model, policy simulation (Phase 3 ML + Phase 4 final)
+    "08_segmentation.ipynb",
+    "09_price_model.ipynb",
+    "10_policy_simulation.ipynb",
+    # Member 4 — chatbot evaluation harness (runs last; was 08, renumbered to 11 so
+    # numeric order matches execution order now that M3 sits between golden answers and eval)
+    "11_chatbot_evaluation.ipynb",
 ]
 
 

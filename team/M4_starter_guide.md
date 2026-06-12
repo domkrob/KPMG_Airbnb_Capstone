@@ -129,7 +129,7 @@ golden = json.loads((REPORTS / 'golden_answers.json').read_text(encoding='utf-8'
 # Target: ≥90% overall accuracy
 ```
 
-Build the eval as a notebook `notebooks/08_chatbot_evaluation.ipynb` so each pass is reproducible.
+Build the eval as a notebook `notebooks/11_chatbot_evaluation.ipynb` so each pass is reproducible.
 
 ## Gotchas to avoid
 
@@ -155,7 +155,7 @@ from src.golden import (
 - `app/streamlit_app.py`
 - `app/tools.py`
 - `app/system_prompt.md`
-- `notebooks/08_chatbot_evaluation.ipynb`
+- `notebooks/11_chatbot_evaluation.ipynb`
 - `reports/evaluation_results.md`
 - `reports/final_slides.pdf`
 - Updated `README.md` with how-to-run instructions

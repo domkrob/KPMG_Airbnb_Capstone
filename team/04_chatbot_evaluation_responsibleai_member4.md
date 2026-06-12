@@ -70,7 +70,7 @@ The model calls these; the chatbot returns numbers from the table only. Zero fab
 - `app/streamlit_app.py`
 - `app/tools.py` (tool function implementations)
 - `app/system_prompt.md`
-- `notebooks/08_chatbot_evaluation.ipynb`
+- `notebooks/11_chatbot_evaluation.ipynb`
 - `reports/evaluation_results.md`
 - `reports/final_slides.pdf`
 - Updated repo `README.md` with run instructions

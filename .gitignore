@@ -5,6 +5,7 @@ data/raw/
 # small reference artifacts are explicitly tracked via the !exceptions below.
 data/processed/*
 !data/processed/neighbourhood_kpis.csv
+!data/processed/knowledge_layer.csv
 !data/processed/london_borough_kpis.csv
 !data/processed/subdivision_name_map.csv
 !data/processed/data_dictionary.md

@@ -179,6 +179,22 @@ Single source of truth for every column in every file under `data/processed/`. M
 | tier_concentration_price      | str     | Phase B (mentor update) | Risk tier combining concentration and price: tier_1 (top quartile in both str_density AND median_nightly_price), tier_2 (top quartile in one), tier_3 (neither). Thresholds computed per city. | tier_1|tier_2|tier_3     |        0   | tier_3      | Drives the 'policy advisor' framing. Reads in pair with tier_sample_adequate.                                                                                        |
 | tier_sample_adequate          | bool    | Phase B (mentor update) | True if str_density >= 5 — i.e., enough listings for the tier label to be meaningful.                                                                                                          | True/False               |        0   | True        | Chatbot should caveat tier conclusions for any row where this is False.                                                                                              |
 
+## `data/processed/knowledge_layer.csv`
+
+**Unit of analysis:** 1 row = 1 (city, geo_key) neighbourhood
+**Rows:** 560 · **Cols:** 35
+**Source:** Member 3 — `neighbourhood_kpis.csv` (all 27 cols, unchanged) + 3 model columns + 4 canonical aliases.
+**Notes:** This is the **final knowledge layer** the chatbot retrieves from. `app/tools.py` loads this file first and falls back to `neighbourhood_kpis.csv`. All 27 Member 2 columns are carried through verbatim (see the section above); only the additions are documented here.
+
+| column                  | dtype   | source        | definition                                                                                                                                                                  | unit                              | null_pct | example                | notes |
+|:------------------------|:--------|:--------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------|---------:|:-----------------------|:------|
+| cluster_label           | str     | Phase 3 (M3)  | KMeans (k=3) segment on the STR-pressure profile: `saturated` (enforcement priority), `emerging` (high pressure per listing, watch list), `low_impact`. Labels assigned by centroid pressure rank → stable across reruns. | saturated\|emerging\|low_impact   |      0   | saturated              | Q5. Pooled cross-city scaling; `random_state=42`. |
+| cluster_distance        | float64 | Phase 3 (M3)  | Euclidean distance to the assigned cluster centroid in StandardScaler space.                                                                                              | distance (scaled)                 |      0   | 1.84                   | Confidence proxy — lower = more typical of its cluster. |
+| risk_priority_score     | float64 | Phase 3 (M3)  | Per-city weighted composite (str_density .20, entire_home_share .30, commercial_host_share .20, breach_rate_90 .30), sample-shrunk by `density/(density+5)`, rescaled so each city's worst = 100. | score 0–100                       |      0   | 100.0                  | Higher = higher policy priority. Prefer `tier_sample_adequate==True` rows when ranking. |
+| subdivision             | str     | Phase 3 (M3)  | Alias of `geo_key` — the canonical name `app/tools.py` exposes to the chatbot.                                                                                            | string                            |      0   | la Dreta de l'Eixample | Same value as `geo_key`. |
+| breach_rate             | float64 | Phase 3 (M3)  | Alias of `breach_rate_90`.                                                                                                                                                | ratio 0–1                         |     10.7 | 0.473                  | Canonical single-breach-rate name. |
+| listings_impacted_90/60/30 | int64 | Phase 3 (M3)  | Aliases of `breach_count_90/60/30` — entire homes impacted at each nightly cap (Q7).                                                                                      | count                             |      0   | 95                     | Policy simulation output. |
+
 ## `data/processed/london_borough_kpis.csv`
 
 **Unit of analysis:** 1 row = 1 London borough  
