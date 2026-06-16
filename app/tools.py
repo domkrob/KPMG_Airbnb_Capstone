@@ -1,6 +1,6 @@
 """app/tools.py — knowledge-layer query tools for the Urban Rental Intelligence Copilot.
 
-The Claude model calls these tools; this module returns structured results from the
+The LLM calls these tools via function calling; this module returns structured results from the
 knowledge layer (and the regulatory corpus). The model then turns those results into
 a cited, natural-language answer. The model is told to invent nothing — so every
 function here returns either real data or an explicit "not available" signal. There
@@ -79,7 +79,17 @@ _CANON: dict[str, tuple[str, ...]] = {
     "professional_management_share": ("professional_management_share",),
     # M3-only — absent in the fallback file. Tools must check before using.
     "risk_priority_score": ("risk_priority_score",),
+    "risk_tier": ("risk_tier",),
     "cluster_label": ("cluster_label",),
+}
+
+# Risk tiers derived (per city) from risk_priority_score: 1 = top third (highest
+# priority), 2 = middle third, 3 = bottom third. Stored as an int in the layer.
+VALID_RISK_TIERS = (1, 2, 3)
+_RISK_TIER_MEANING = {
+    1: "top third — highest priority for action",
+    2: "middle third — monitor",
+    3: "bottom third — lowest priority",
 }
 
 # Metrics a user / the model may rank or compare by -> canonical column.
@@ -439,10 +449,74 @@ def list_by_cluster(city: str, cluster_label: str | None = None, top_n: int = 10
 
 
 # --------------------------------------------------------------------------- #
+# Core tool 5c: get_risk_tier_areas (risk-tier classification — proactive advisor)
+# --------------------------------------------------------------------------- #
+def _coerce_tier(tier) -> int | None:
+    """Accept 1/2/3, '1', 'tier 1', 'tier_1', 'Tier 3' -> int tier, else None."""
+    if isinstance(tier, bool):
+        return None
+    if isinstance(tier, (int, float)) and float(tier).is_integer():
+        t = int(tier)
+        return t if t in VALID_RISK_TIERS else None
+    m = re.search(r"[123]", str(tier))
+    if not m:
+        return None
+    t = int(m.group())
+    return t if t in VALID_RISK_TIERS else None
+
+
+def get_risk_tier_areas(city: str, tier) -> dict:
+    """Return every neighbourhood in a city at a given risk tier (1, 2, or 3),
+    sorted by ``risk_priority_score`` descending.
+
+    Risk tiers are computed per city from ``risk_priority_score``: Tier 1 is the top
+    third (highest-priority for action), Tier 2 the middle third, Tier 3 the bottom
+    third. Call this when the analyst asks "which areas are highest priority / Tier 1",
+    "what should we focus on in <city>", or wants the action shortlist for a tier.
+
+    Returns ``column_not_available`` if the knowledge layer lacks risk tiers (i.e.
+    Member 3's risk scoring has not been merged yet).
+    """
+    c = _validate_city(city)
+    if c is None:
+        return {"error": "invalid_city", "detail": f"city must be one of {VALID_CITIES}"}
+
+    t = _coerce_tier(tier)
+    if t is None:
+        return {
+            "error": "invalid_tier",
+            "detail": f"tier must be one of {VALID_RISK_TIERS} (1 = highest priority)",
+        }
+
+    df = load_knowledge_layer()
+    if (err := _require_column(df, "risk_tier")) is not None:
+        return err
+    if (err := _require_column(df, "risk_priority_score")) is not None:
+        return err
+
+    sub = df[(df["city"] == c) & (df["risk_tier"] == t)].copy()
+    sub = sub.sort_values("risk_priority_score", ascending=False)
+
+    keep = ["subdivision", "risk_priority_score", "risk_tier"]
+    for extra in ("breach_rate", "entire_home_share", "str_density",
+                  "reside_unregistered_count", "cluster_label"):
+        if extra in sub.columns and extra not in keep:
+            keep.append(extra)
+
+    return {
+        "city": c,
+        "tier": t,
+        "tier_meaning": _RISK_TIER_MEANING[t],
+        "count": int(len(sub)),
+        "results": _clean_records(sub, keep),
+    }
+
+
+# --------------------------------------------------------------------------- #
 # Tool 6: query_regulations — lightweight RAG over the regulatory corpus
 # --------------------------------------------------------------------------- #
 _CITY_REG_LABEL = {
-    "barcelona": "Barcelona — Plan RESIDE / STR regulations",
+    "barcelona": "Barcelona — PEUAT (Pla Especial Urbanístic d'Allotjament Turístic) / Plan RESIDE / STR regulations",
     "london": "London — Deregulation Act 2015 (90-night rule)",
 }
 
