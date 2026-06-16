@@ -54,6 +54,9 @@ dependencies:
   - pip:
       # Chatbot stack (Phase 5)
       - streamlit
-      - anthropic
+      - anthropic            # LLM backend: Claude Haiku 4.5 via the Messages API tool-use loop
       - tiktoken
       - pdfplumber           # RAG: read regulatory PDFs (Alternative use case)
+      - plotly               # inline bubble charts
+      - folium               # inline choropleth maps
+      - streamlit-folium     # render folium maps inside Streamlit

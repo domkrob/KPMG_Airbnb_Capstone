@@ -1,3 +1,8 @@
+> ⚠️ SUPERSEDED — This report was generated on 2026-06-10 before Member 3's pipeline
+> and Member 4's chatbot were complete. It contains outdated statements (e.g.
+> knowledge_layer.csv "does not exist"). See reports/evaluation_results.md for current
+> status.
+
 # Capstone Gap Report (v2) — post-pipeline validation
 
 _Revalidated 2026-06-10, after notebooks 01–07 ran clean. Supersedes the v1 report._

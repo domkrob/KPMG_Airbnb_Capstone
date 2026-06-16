@@ -4,6 +4,17 @@ IE × KPMG Capstone 2026. A GenAI decision-support assistant for city housing po
 
 > The tool surfaces associations and risk indicators. It does NOT claim Airbnb causes rent rises.
 
+## Running the Chatbot
+
+```bash
+conda activate kpmg
+streamlit run app/streamlit_app.py
+```
+
+Then open http://localhost:8501 in your browser.
+
+Requires `ANTHROPIC_API_KEY` set in a `.env` file at the repo root.
+
 ## Pipeline at a glance
 
 ```
@@ -62,7 +73,7 @@ Or run notebooks 01 → 07 in order via Jupyter.
 - **Member 1** — Data cleaning + base flags ✅ done
 - **Member 2** (Mohammed) — Feature engineering + EDA + knowledge layer ✅ done
 - **Member 3** — Clustering + price model + risk score ⏳ next. **Start here:** `team/M3_starter_guide.md`
-- **Member 4** — Streamlit + Claude chatbot + evaluation ⏳ after M3. **Start here:** `team/M4_starter_guide.md`
+- **Member 4** — Streamlit + GenAI chatbot + evaluation ⏳ after M3. **Start here:** `team/M4_starter_guide.md`
 
 ## Key outputs
 

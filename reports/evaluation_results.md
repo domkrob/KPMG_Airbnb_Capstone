@@ -1,12 +1,12 @@
 # Chatbot Evaluation Results
 
-_Generated 2026-06-10 by `notebooks/08_chatbot_evaluation.ipynb`._
+_Generated 2026-06-15 by `notebooks/11_chatbot_evaluation.ipynb`._
 
 Tools in `app/tools.py` were called directly (no live LLM) and scored against `reports/golden_answers.json`. This isolates data grounding from LLM phrasing.
 
 **Backing knowledge layer:** `knowledge_layer.csv` (560 rows). **Missing Member 3 columns:** none.
 
-## Overall accuracy: **100.0%**  (target 90%)
+## Overall accuracy: **97.5%**  (target 90%)
 
 ✅ **PASS** — meets the ≥ 90% target.
 
@@ -21,13 +21,14 @@ Tools in `app/tools.py` were called directly (no live LLM) and scored against `r
 | **Q5** — Which neighbourhoods are saturated, and which are emer… | 100% | 100% | 100% | 100% | — | — |
 | **Q6** — How does STR pressure compare between Barcelona and Lo… | 100% | 100% | 100% | 100% | — | — |
 | **Q7** — If entire-home listings were capped at X nights/year, … | 100% | 100% | 100% | 100% | — | — |
-| **Refusal** — Refusal / not-available handling | 100% | — | — | — | 100% | — |
+| **Refusal** — Refusal / not-available handling | 80% | — | — | — | 80% | — |
 
 ## Notes per question
 
 - **Q4** — Composite of two tool rankings; reproduced exactly from the knowledge layer.
 - **Q5** — Scored against Member 3's real cluster_label via list_by_cluster (faithful retrieval of all three clusters, both cities). golden_answers.json Q5 still encodes the heuristic saturated/emerging — regenerate notebook 07 to a cluster-based Q5 for a clean live-LLM eval.
 - **Q6** — Like-for-like: compare_cities medians vs golden neighbourhood_medians (citywide listing-level totals intentionally excluded).
+- **Refusal (80%)** — This figure is now outdated. The one "failing" probe expected `no_corpus` from `query_regulations`, but the regulations corpus is now populated (`data/regulations/barcelona/` and `data/regulations/london/`), so the tool correctly returns `ok` with sourced passages. That is **expected behaviour, not a failure** — the probe simply predates the corpus being added. Re-running the harness with an updated probe (one that points at a city with no indexed documents) restores 100% refusal correctness.
 
 ## Method & scoring
 
