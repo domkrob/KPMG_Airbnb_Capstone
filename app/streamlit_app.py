@@ -883,7 +883,7 @@ _BASE_CSS = """
       /* ---------- Header ---------- */
       .uric-header { margin-bottom: 1.75rem; }
       .uric-header h1 {
-        display: flex; align-items: center; gap: 0.55rem;
+        <div style="display:flex; align-items:flex-end; gap:0.75rem; margin-bottom:0.35rem;">
         font-size: 1.95rem; font-weight: 700; letter-spacing: -0.01em;
         margin: 0 0 0.35rem 0; line-height: 1.2;
       }
@@ -1092,15 +1092,29 @@ st.markdown(
 st.markdown(
     """
     <div class="uric-header">
-      <h1>
-        <svg class="uric-logo" viewBox="0 0 24 24" fill="none"
+      <div style="display:flex; flex-direction:row; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+        <svg style="width:3rem; height:3rem; flex:0 0 auto;" viewBox="0 0 48 48" fill="none"
              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="10.5" cy="10.5" r="6.5" stroke="#1E49E2" stroke-width="2"/>
-          <line x1="15.5" y1="15.5" x2="21" y2="21" stroke="#1E49E2"
-                stroke-width="2" stroke-linecap="round"/>
+          <defs><clipPath id="lc"><circle cx="21" cy="21" r="15"/></clipPath></defs>
+          <g clip-path="url(#lc)">
+            <rect x="11" y="20" width="4" height="16" fill="var(--brand)"/>
+            <rect x="17" y="14" width="4" height="22" fill="var(--brand)" opacity="0.6"/>
+            <rect x="23" y="9"  width="4" height="27" fill="var(--brand)"/>
+            <rect x="29" y="13" width="4" height="23" fill="var(--brand)" opacity="0.6"/>
+            <rect x="12" y="22" width="2" height="1.5" fill="#E8006E"/>
+            <rect x="23" y="11" width="2" height="1.5" fill="#E8006E"/>
+          </g>
+          <circle cx="21" cy="21" r="15" stroke="#E8006E" stroke-width="2.5"/>
+          <line x1="32" y1="32" x2="43" y2="43" stroke="#E8006E" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="43" cy="43" r="2.5" fill="#E8006E"/>
         </svg>
-        <span><span class="uric-brand">Urban</span><span class="uric-brand-accent">Lens</span></span>
-      </h1>
+        <div style="display:flex; flex-direction:column; gap:2px;">
+          <div style="font-size:1.95rem; font-weight:700; letter-spacing:-0.01em; line-height:1.1;">
+            <span class="uric-brand">Urban</span>&nbsp;<span class="uric-brand-accent">Lens</span>
+          </div>
+          <div style="font-size:0.6rem; font-weight:700; letter-spacing:0.15em; color:var(--muted); text-transform:uppercase;">Short-Term Rental Intelligence</div>
+        </div>
+      </div>
       <p>AI-powered policy advisor for short-term-rental regulation — Barcelona
          &amp; London. Risk-tiered priorities, every figure tool-sourced.</p>
       <div class="uric-rule"></div>
