@@ -1,6 +1,6 @@
 # Chatbot Evaluation Results
 
-_Generated 2026-06-15 by `notebooks/11_chatbot_evaluation.ipynb`._
+_Generated 2026-06-17 by `notebooks/08_chatbot_evaluation.ipynb`._
 
 Tools in `app/tools.py` were called directly (no live LLM) and scored against `reports/golden_answers.json`. This isolates data grounding from LLM phrasing.
 
@@ -28,7 +28,6 @@ Tools in `app/tools.py` were called directly (no live LLM) and scored against `r
 - **Q4** — Composite of two tool rankings; reproduced exactly from the knowledge layer.
 - **Q5** — Scored against Member 3's real cluster_label via list_by_cluster (faithful retrieval of all three clusters, both cities). golden_answers.json Q5 still encodes the heuristic saturated/emerging — regenerate notebook 07 to a cluster-based Q5 for a clean live-LLM eval.
 - **Q6** — Like-for-like: compare_cities medians vs golden neighbourhood_medians (citywide listing-level totals intentionally excluded).
-- **Refusal (80%)** — This figure is now outdated. The one "failing" probe expected `no_corpus` from `query_regulations`, but the regulations corpus is now populated (`data/regulations/barcelona/` and `data/regulations/london/`), so the tool correctly returns `ok` with sourced passages. That is **expected behaviour, not a failure** — the probe simply predates the corpus being added. Re-running the harness with an updated probe (one that points at a city with no indexed documents) restores 100% refusal correctness.
 
 ## Method & scoring
 

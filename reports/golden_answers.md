@@ -1,6 +1,6 @@
 # Golden Answers — 7 Canonical Questions
 
-_Generated on 2026-06-11._
+_Generated on 2026-06-15._
 
 Member 4 evaluates the chatbot against these numbers. Target: ≥90% accuracy. Numbers come directly from `data/processed/neighbourhood_kpis.csv`.
 
@@ -190,8 +190,8 @@ _Method: Saturated = composite of high density + entire-home share + commercial-
 |   rank | geo_key               |   prior_active |   recent_active |   active_growth_pct | recommended_action                                                                                                                                         |
 |-------:|:----------------------|---------------:|----------------:|--------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------|
 |      1 | Can Baró              |            5   |             6   |                20   | Emerging hotspot (+20% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement. |
-|      2 | la Font de la Guatlla |            9   |             9   |                 0   | Emerging hotspot (+0% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement.  |
-|      3 | la Sagrera            |            5   |             5   |                 0   | Emerging hotspot (+0% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement.  |
+|      2 | la Sagrera            |            5   |             5   |                 0   | Emerging hotspot (+0% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement.  |
+|      3 | la Font de la Guatlla |            9   |             9   |                 0   | Emerging hotspot (+0% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement.  |
 |      4 | les Corts             |           21.5 |            21.2 |                -1.6 | Emerging hotspot (+-2% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement. |
 |      5 | el Baix Guinardó      |           12   |            11.2 |                -6.9 | Emerging hotspot (+-7% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement. |
 
@@ -204,8 +204,8 @@ _Method: Saturated = composite of high density + entire-home share + commercial-
 |      3 | Gants Hill   |            5   |             5.5 |                10   | Emerging hotspot (+10% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement. |
 |      4 | North Sheen  |            9.8 |            10   |                 1.7 | Emerging hotspot (+2% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement.  |
 |      5 | Earlsfield   |           13.5 |            13.7 |                 1.2 | Emerging hotspot (+1% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement.  |
-|      6 | Edmonton     |            5   |             5   |                 0   | Emerging hotspot (+0% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement.  |
-|      7 | East Sheen   |            6   |             6   |                 0   | Emerging hotspot (+0% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement.  |
+|      6 | East Sheen   |            6   |             6   |                 0   | Emerging hotspot (+0% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement.  |
+|      7 | Edmonton     |            5   |             5   |                 0   | Emerging hotspot (+0% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement.  |
 |      8 | Finchley     |            8.3 |             8.2 |                -2   | Emerging hotspot (+-2% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement. |
 |      9 | Highams Park |            9.5 |             9.2 |                -3.5 | Emerging hotspot (+-4% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement. |
 |     10 | Selhurst     |            9   |             8.7 |                -3.7 | Emerging hotspot (+-4% active listings in 6 months). Pre-emptive monitoring; consider early intervention before saturation triggers stronger displacement. |

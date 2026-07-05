@@ -642,7 +642,7 @@ def _render_choropleth(name: str, output: dict, key: str) -> None:
 
     metric = "risk_priority_score" if name == "get_risk_tier_areas" else output.get("metric")
     rows = output.get("results") or []
-    vals = {r.get("subdivision"): r.get(metric) for r in rows if r.get(metric) is not None}
+    vals = {(r.get("subdivision") or r.get("borough")): r.get(metric) for r in rows if r.get(metric) is not None}
     if not vals:
         return
 
