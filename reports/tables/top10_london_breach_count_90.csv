@@ -1,0 +1,11 @@
+city,geo_key,str_density,breach_count_90
+london,Whitechapel,242,44
+london,Paddington,152,42
+london,Westbourne Green,210,41
+london,Marylebone,178,35
+london,North Kensington,104,26
+london,Chelsea,123,26
+london,Barnsbury,109,24
+london,West Kensington,127,24
+london,Earl's Court,168,23
+london,Shoreditch,63,23

@@ -1,0 +1,19 @@
+city,airdna_name,geojson_name,notes
+barcelona,Gothic Quarter,el Barri Gòtic,English vs Catalan spelling
+barcelona,Sants-Badal,Sants - Badal,Geojson has spaces around hyphen
+barcelona,Sant Andreu de Palomar,Sant Andreu,Geojson uses shorter form
+barcelona,el Poble-sec,el Poble Sec,Hyphen and capitalization difference
+barcelona,el Putget i Farró,el Putxet i el Farró,Catalan spelling variant
+london,Bayswater,Westminster,AirDNA records this sub-area at neighbourhood-name level; rolls up into Westminster borough
+london,Belgravia,Westminster,Sub-area of Westminster
+london,Knightsbridge,Westminster,Mostly Westminster (small part in Kensington and Chelsea)
+london,Maida Hill,Westminster,Sub-area of Westminster
+london,Maida Vale,Westminster,Sub-area of Westminster
+london,Marylebone,Westminster,Sub-area of Westminster
+london,Mayfair,Westminster,Sub-area of Westminster
+london,Millbank,Westminster,Sub-area of Westminster
+london,Paddington,Westminster,Sub-area of Westminster
+london,Pimlico,Westminster,Sub-area of Westminster
+london,Queen's Park,Westminster,Mostly Westminster (small part in Brent)
+london,St. John's Wood,Westminster,Sub-area of Westminster (some Camden)
+london,Victoria,Westminster,Sub-area of Westminster

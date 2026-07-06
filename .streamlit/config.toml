@@ -1,0 +1,9 @@
+# Urban Rental Intelligence Copilot — consulting-grade light theme.
+# Navy text on white/light-grey, cobalt accent. No dark mode.
+[theme]
+base = "light"
+primaryColor = "#1E49E2"            # cobalt — interactive / accent
+backgroundColor = "#F7FAFC"         # main canvas — very light grey
+secondaryBackgroundColor = "#FFFFFF"  # sidebar, inputs, cards — white
+textColor = "#0B1F33"               # dark navy
+font = "sans serif"

@@ -1,0 +1,11 @@
+city,geo_key,str_density,median_nightly_price
+london,Mayfair,33,662.8
+london,South Kensington,87,409.9
+london,Chelsea,123,405.2
+london,Brompton,100,306.6
+london,Paddington,152,301.5
+london,Holborn,74,299.95
+london,London Borough of Wandsworth,36,288.7
+london,Bloomsbury,69,282.8
+london,St. John's Wood,42,277.4
+london,Kensington,74,273.7

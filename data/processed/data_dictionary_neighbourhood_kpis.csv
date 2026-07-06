@@ -1,0 +1,28 @@
+column,dtype,definition,unit
+city,string,City label (barcelona | london).,—
+geo_key,string,"Neighbourhood key — subdivision when available, else neighborhood.",—
+geo_level,string,Resolution of geo_key: subdivision | neighborhood.,—
+str_density,int,Total short-term-rental listings in the neighbourhood.,count
+active_listings,int,Listings active in any of the last 12 months.,count
+active_share,float,active_listings / str_density.,ratio 0–1
+entire_home_count,int,Listings flagged entire-home.,count
+entire_home_share,float,entire_home_count / str_density. Primary displacement proxy.,ratio 0–1
+commercial_host_share,float,Share of listings owned by commercial+super-commercial hosts (>=5 listings).,ratio 0–1
+multi_listing_host_count,int,Listings owned by hosts with >=2 listings.,count
+multi_listing_host_share,float,multi_listing_host_count / str_density.,ratio 0–1
+median_nightly_price,float,Median TTM average daily rate in EUR/GBP.,currency
+p25_price,float,25th percentile of TTM nightly rate.,currency
+p75_price,float,75th percentile of TTM nightly rate.,currency
+avg_occupancy,float,Mean l90d_occupancy across listings in the neighbourhood. Defaults to 0.0 when AirDNA reports no occupancy data for any listing (only happens in tiny peripheral subdivisions; cross-check tier_sample_adequate before drawing conclusions).,ratio 0–1
+total_revenue,float,Sum of TTM revenue across all listings (local currency).,currency
+breach_count_90,int,Entire-home listings with ttm_days_booked > 90 — listings impacted at a 90-night cap.,count
+breach_count_60,int,Entire-home listings with ttm_days_booked > 60.,count
+breach_count_30,int,Entire-home listings with ttm_days_booked > 30.,count
+breach_rate_90,float,breach_count_90 / entire_home_count.,ratio 0–1
+breach_rate_60,float,breach_count_60 / entire_home_count.,ratio 0–1
+breach_rate_30,float,breach_count_30 / entire_home_count.,ratio 0–1
+reside_unregistered_count,int,"Entire homes without a registration on record. Regulatory signal for Barcelona (RESIDE) — for London it's context only, not a breach.",count
+reside_unregistered_share,float,reside_unregistered_count / entire_home_count.,ratio 0–1
+professional_management_share,float,"Share of professionally-managed listings, computed only over listings where the field was reported (avoids null-imputation bias).",ratio 0–1
+tier_concentration_price,string,Policy-advisor risk tier (mentor update). tier_1 = top-quartile str_density AND median_nightly_price (per city); tier_2 = top-quartile in one; tier_3 = neither.,tier_1|tier_2|tier_3
+tier_sample_adequate,bool,"True if str_density >= 5; below that, the tier label is set to tier_3 but should be presented with a caveat.",True/False

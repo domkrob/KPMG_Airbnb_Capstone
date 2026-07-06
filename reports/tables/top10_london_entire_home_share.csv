@@ -1,0 +1,11 @@
+city,geo_key,str_density,entire_home_share
+london,Brompton,100,0.95
+london,London Borough of Wandsworth,36,0.9444
+london,Mayfair,33,0.9394
+london,Chelsea,123,0.9106
+london,Notting Hill,119,0.8908
+london,South Kensington,87,0.8736
+london,Holborn,74,0.8649
+london,Earl's Court,168,0.8631
+london,Marylebone,178,0.8596
+london,Shoreditch,63,0.8571

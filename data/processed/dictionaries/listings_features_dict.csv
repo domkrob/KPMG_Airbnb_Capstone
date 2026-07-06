@@ -1,0 +1,51 @@
+column,dtype,source,definition,unit,null_pct,example,notes
+listing_id,int64,raw AirDNA,Unique listing identifier.,—,0.0,14948804,
+host_id,str,raw AirDNA,Anonymous host identifier.,—,0.0,cb910e924e2d,
+professional_management,object,raw AirDNA,Whether the listing is managed by a professional company.,True/False/null,53.2,False,~54% null in LDN raw — use professional_management_known to filter.
+superhost,object,raw AirDNA,Whether the host has Airbnb Superhost status.,True/False,3.9,False,
+cohost,object,raw AirDNA,Whether the listing has a cohost.,True/False/null,39.0,True,
+neighborhood,str,raw AirDNA,District (BCN) or borough (LDN).,string,2.3,Sant Martí,LDN values are prefixed e.g. 'London Borough of Camden'.
+subdivision,str,raw AirDNA,Barrio (BCN) or local neighbourhood (LDN).,string,11.4,el Camp de l'Arpa del Clot,Null in 9% BCN / 12% LDN. Main key for neighbourhood analysis.
+latitude,float64,raw AirDNA (rescaled),Listing latitude in decimal degrees.,degrees,0.0,41.407,Raw value was ×1e8; rescaled in cleaning Section 7.5.
+longitude,float64,raw AirDNA (rescaled),Listing longitude in decimal degrees.,degrees,0.0,2.182,Raw value was ×1e8; rescaled in cleaning Section 7.5.
+listing_type,str,raw AirDNA,Full listing-type label e.g. 'Entire rental unit'.,string,0.0,Private room in rental unit,
+room_type,str,raw AirDNA,Normalised room type.,entire_home|private_room|shared_room|hotel_room,0.0,private_room,
+guests,float64,raw AirDNA,Max guests advertised.,count,15.7,2.0,
+bedrooms,float64,raw AirDNA,Bedrooms.,count,16.9,1.0,
+beds,float64,raw AirDNA,Beds.,count,1.6,1.0,
+baths,int64,raw AirDNA,Bathrooms.,count,0.0,10,
+num_reviews,float64,raw AirDNA,Total reviews to date.,count,0.3,27.0,
+star_rating,float64,raw AirDNA (rescaled),"Average star rating, 0–5.",stars,16.9,4.72,Raw value was ×100; rescaled in cleaning Section 7.5.
+registration,object,raw AirDNA,Whether a registration/licence is on record.,True/False/null,39.0,True,
+ttm_revenue,float64,raw AirDNA,Trailing-twelve-month revenue.,EUR or GBP,27.7,24113.0,
+ttm_days_booked,float64,raw AirDNA,Days booked in last 12 months.,days,27.7,155.0,Drives the 90-night breach flag.
+ttm_avg_rate,float64,raw AirDNA,TTM average nightly rate.,EUR or GBP/night,27.7,144.7,
+l90d_revenue,float64,raw AirDNA,Last-90-day revenue.,EUR or GBP,27.7,420.0,
+l90d_occupancy,float64,raw AirDNA,Last-90-day occupancy ratio.,ratio 0–1,27.7,0.033,
+l90d_revpar,float64,raw AirDNA,Last-90-day revenue per available room.,EUR or GBP,27.7,4.4,
+months,str,raw AirDNA,Embedded JSON list of monthly performance.,JSON string,0.0,"[{""date"": 1614556800000, ""available_days"": 31, ""unavailable_",Exploded into *_monthly_metrics_clean.csv.
+host_listing_count,int64,cleaning,Number of listings owned by this host across the dataset.,count,0.0,1,
+multi_listing_host,bool,cleaning,host_listing_count > 1.,True/False,0.0,False,
+host_5_plus_listings,bool,cleaning,host_listing_count >= 5.,True/False,0.0,False,
+host_10_plus_listings,bool,cleaning,host_listing_count >= 10.,True/False,0.0,False,
+entire_home_flag,bool,cleaning,room_type == 'entire_home'.,True/False,0.0,False,Tightened to explicit equality after audit.
+professional_management_flag,bool,cleaning,"professional_management coerced to bool, nulls -> False.",True/False,0.0,False,Use with professional_management_known to filter to reported-only.
+has_registration,bool,cleaning,registration is not null.,True/False,0.0,False,
+has_subdivision,bool,cleaning Section 7.5,subdivision is not null.,True/False,0.0,True,Use to filter when aggregating at subdivision level.
+professional_management_known,bool,cleaning Section 7.5,professional_management was reported (not null).,True/False,0.0,False,Filter on this for honest professional-management share.
+city,str,Phase A,City label.,barcelona|london,0.0,barcelona,
+is_active_recent,bool,Phase A,Listing had active=True in any of the last 12 months.,True/False,0.0,False,Use to filter to live listings.
+high_intensity_flag,bool,Phase A,ttm_days_booked >= 180 (half-year booking floor).,True/False,0.0,False,Full-time STR proxy.
+occupancy_band,str,Phase A,Quartile bucket of l90d_occupancy.,low|med|high|very_high|unknown,0.0,unknown,
+price_band,str,Phase A,Quartile bucket of ttm_avg_rate.,budget|mid|premium|luxury|unknown,0.0,unknown,
+revenue_band,str,Phase A,Quartile bucket of ttm_revenue.,low|med|high|very_high|unknown,0.0,unknown,
+revenue_per_active_day,float64,Phase A,ttm_revenue / ttm_days_booked.,currency/day,52.0,155.568,Null when no booked days.
+breach_90_flag,bool,Phase A,entire_home AND ttm_days_booked > 90.,True/False,0.0,False,London 90-night cap proxy.
+breach_60_flag,bool,Phase A,entire_home AND ttm_days_booked > 60.,True/False,0.0,False,Stretch policy scenario.
+breach_30_flag,bool,Phase A,entire_home AND ttm_days_booked > 30.,True/False,0.0,False,Aggressive policy scenario.
+reside_unregistered_flag,bool,Phase A,entire_home AND has_registration is False.,True/False,0.0,False,Regulatorily meaningful for Barcelona (RESIDE). Context-only for London.
+geo_key,str,Phase A,"subdivision when present, else neighborhood.",string,2.3,el Camp de l'Arpa del Clot,Single key for neighbourhood-level grouping. Avoids 9–12% loss from null subdivisions.
+geo_level,str,Phase A,Resolution of geo_key.,subdivision|neighborhood|unknown,0.0,subdivision,Drop 'unknown' before maps/aggregation.
+host_revenue_total,float64,Phase A,Sum of ttm_revenue across all listings of this host.,currency,0.0,0.0,
+host_active_listings,int64,Phase A,Number of this host's listings that are is_active_recent.,count,0.0,0,
+host_commercial_tier,str,Phase A,Host scale class.,casual|multi|commercial|super_commercial,0.0,casual,"casual=1, multi=2-4, commercial=5-9, super_commercial=10+."
